@@ -193,13 +193,36 @@
                     <!-- Populated by JS -->
                 </div>
 
+                <!-- Search Bar -->
+                <div class="mb-6">
+                    <div class="search-box">
+                        <svg class="search-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" id="reading-search" class="search-input" placeholder="搜索书名或作者...">
+                        <button id="reading-search-clear" class="search-clear hidden" title="清除">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
                 <!-- Filter Tags -->
-                <div class="flex flex-wrap gap-2 mb-10" id="reading-tags">
+                <div class="flex flex-wrap gap-2 mb-3" id="reading-tags">
                     <button class="tag-btn active px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="all">全部</button>
                     <button class="tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="reading">在读</button>
                     <button class="tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="finished">已读完</button>
                     <button class="tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="unread">未开始</button>
                 </div>
+
+                <!-- Category Tags (dynamic) -->
+                <div class="flex flex-wrap gap-2 mb-6" id="reading-category-tags">
+                    <!-- Populated by JS -->
+                </div>
+
+                <!-- Result count -->
+                <div class="result-count" id="reading-result-count"></div>
 
                 <!-- Books Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="reading-list">

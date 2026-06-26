@@ -231,6 +231,8 @@ class ReadingRenderer {
     constructor() {
         this.data = null;
         this.currentTag = 'all';
+        this.currentCategory = null;
+        this.searchQuery = '';
         this.refreshing = false;
         this.init();
     }
@@ -239,9 +241,11 @@ class ReadingRenderer {
         await this.loadData();
         if (this.data) {
             this.renderStats();
+            this.renderCategoryTags();
             this.renderBooks();
             this.renderSyncTime();
             this.setupTagFilter();
+            this.setupSearch();
         }
         this.hideLoading();
         this.setupRefresh();
@@ -335,14 +339,15 @@ class ReadingRenderer {
 
         const s = this.data.summary;
         const stats = [
-            { value: s.totalBooks || 0, label: '书架总计' },
-            { value: s.readingCount || 0, label: '在读' },
-            { value: s.finishedCount || 0, label: '已读完' },
-            { value: s.unreadCount || 0, label: '未开始' },
+            { value: s.totalBooks || 0, label: '书架总计', icon: '📚', color: 'indigo' },
+            { value: s.readingCount || 0, label: '在读', icon: '📖', color: 'cyan' },
+            { value: s.finishedCount || 0, label: '已读完', icon: '✅', color: 'emerald' },
+            { value: s.unreadCount || 0, label: '未开始', icon: '📕', color: 'slate' },
         ];
 
         container.innerHTML = stats.map(stat => `
-            <div class="stat-card">
+            <div class="stat-card stat-card-${stat.color}">
+                <div class="stat-icon">${stat.icon}</div>
                 <div class="stat-value">${stat.value}</div>
                 <div class="stat-label">${stat.label}</div>
             </div>
@@ -358,9 +363,87 @@ class ReadingRenderer {
     }
 
     getFilteredBooks() {
-        const all = this.getAllBooks();
-        if (this.currentTag === 'all') return all;
-        return all.filter(b => b.status === this.currentTag);
+        let all = this.getAllBooks();
+        // 状态筛选
+        if (this.currentTag !== 'all') {
+            all = all.filter(b => b.status === this.currentTag);
+        }
+        // 分类筛选
+        if (this.currentCategory) {
+            all = all.filter(b => b.category === this.currentCategory);
+        }
+        // 搜索过滤
+        if (this.searchQuery) {
+            const q = this.searchQuery.toLowerCase();
+            all = all.filter(b =>
+                (b.title && b.title.toLowerCase().includes(q)) ||
+                (b.author && b.author.toLowerCase().includes(q))
+            );
+        }
+        return all;
+    }
+
+    renderCategoryTags() {
+        const container = document.getElementById('reading-category-tags');
+        if (!container || !this.data) return;
+
+        const categories = [...new Set(this.getAllBooks().map(b => b.category).filter(Boolean))];
+        if (categories.length === 0) {
+            container.innerHTML = '';
+            return;
+        }
+
+        container.innerHTML = categories.map(cat => `
+            <button class="tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="${this.escapeAttr(cat)}">
+                ${this.escapeHtml(cat)}
+            </button>
+        `).join('');
+
+        // 绑定分类筛选事件
+        let activeCategory = null;
+        container.addEventListener('click', (e) => {
+            const btn = e.target.closest('.tag-btn');
+            if (!btn) return;
+
+            // 切换：点击同一个取消选中
+            if (btn.classList.contains('active')) {
+                btn.classList.remove('active');
+                this.currentCategory = null;
+            } else {
+                container.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                this.currentCategory = btn.dataset.category;
+            }
+            this.renderBooks();
+        });
+    }
+
+    setupSearch() {
+        const input = document.getElementById('reading-search');
+        const clearBtn = document.getElementById('reading-search-clear');
+        if (!input) return;
+
+        // 实时搜索（防抖 250ms）
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                this.searchQuery = input.value.trim();
+                if (clearBtn) {
+                    clearBtn.classList.toggle('hidden', !this.searchQuery);
+                }
+                this.renderBooks();
+            }, 250);
+        });
+
+        // 清除按钮
+        clearBtn?.addEventListener('click', () => {
+            input.value = '';
+            this.searchQuery = '';
+            clearBtn.classList.add('hidden');
+            this.renderBooks();
+            input.focus();
+        });
     }
 
     setupTagFilter() {
@@ -376,11 +459,16 @@ class ReadingRenderer {
 
     renderBooks() {
         const container = document.getElementById('reading-list');
+        const countEl = document.getElementById('reading-result-count');
         if (!container) return;
 
         const books = this.getFilteredBooks();
+        if (countEl) {
+            countEl.textContent = books.length > 0 ? `共 ${books.length} 本书` : '';
+        }
+
         if (books.length === 0) {
-            container.innerHTML = '<p class="text-center text-gray-500 col-span-full py-8">暂无数据</p>';
+            container.innerHTML = '<p class="text-center text-gray-500 col-span-full py-8">暂无匹配的书籍</p>';
             return;
         }
 
@@ -390,7 +478,6 @@ class ReadingRenderer {
     renderBookCard(book) {
         const pct = Math.min(100, Math.max(0, book.progress || 0));
         const statusLabel = { reading: '在读', finished: '已读完', unread: '未开始' };
-        const statusClass = pct >= 100 ? 'finished' : pct > 0 ? 'reading' : 'unread';
         const actualStatus = pct >= 100 ? 'finished' : pct > 0 ? 'reading' : 'unread';
 
         let progressClass = 'low';
@@ -398,16 +485,19 @@ class ReadingRenderer {
         else if (pct >= 70) progressClass = 'high';
         else if (pct >= 30) progressClass = 'mid';
 
+        const hasCover = book.cover && book.cover.startsWith('http');
         const coverChar = (book.title || '书').charAt(0);
 
         return `
             <div class="book-card">
-                <div class="flex gap-3 mb-3">
-                    <div class="book-cover">${coverChar}</div>
+                <div class="book-card-top">
+                    <div class="book-cover ${hasCover ? 'has-cover' : ''}">
+                        ${hasCover ? `<img src="${this.escapeAttr(book.cover)}" alt="${this.escapeAttr(book.title)}" loading="lazy" onerror="this.parentElement.classList.remove('has-cover');this.parentElement.textContent='${coverChar}'">` : coverChar}
+                    </div>
                     <div class="book-info">
                         <div class="book-title" title="${this.escapeHtml(book.title)}">${this.escapeHtml(book.title)}</div>
                         <div class="book-author">${this.escapeHtml(book.author || '未知作者')}</div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 flex-wrap">
                             <span class="book-status ${actualStatus}">${statusLabel[actualStatus]}</span>
                             ${book.category ? `<span class="book-category">${this.escapeHtml(book.category)}</span>` : ''}
                         </div>
@@ -422,6 +512,11 @@ class ReadingRenderer {
                 </div>
             </div>
         `;
+    }
+
+    escapeAttr(str) {
+        if (!str) return '';
+        return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
 
     escapeHtml(str) {

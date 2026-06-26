@@ -321,6 +321,59 @@ button {
    Reading (WeRead) Module Styles
    ============================================ */
 
+/* Search Box */
+.search-box {
+    position: relative;
+    max-width: 100%;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-secondary);
+    pointer-events: none;
+}
+
+.search-box .search-input {
+    width: 100%;
+    padding: 12px 40px 12px 44px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: all var(--transition);
+    outline: none;
+}
+
+.search-box .search-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.search-box .search-input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+.search-box .search-clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 4px;
+    border-radius: 50%;
+    color: var(--color-text-secondary);
+    transition: all var(--transition);
+}
+
+.search-box .search-clear:hover {
+    background: var(--color-border);
+    color: var(--color-text);
+}
+
 /* Stats Card */
 .stat-card {
     background: var(--color-surface);
@@ -329,11 +382,34 @@ button {
     padding: 20px;
     text-align: center;
     transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-primary);
+    opacity: 0;
+    transition: opacity var(--transition);
 }
 
 .stat-card:hover {
     border-color: var(--color-primary);
     box-shadow: var(--shadow-sm);
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+.stat-card .stat-icon {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
 }
 
 .stat-card .stat-value {
@@ -349,12 +425,26 @@ button {
     margin-top: 4px;
 }
 
+/* Colored stat cards */
+.stat-card-indigo::before { background: var(--color-primary); }
+.stat-card-cyan::before { background: #06b6d4; }
+.stat-card-emerald::before { background: #10b981; }
+.stat-card-slate::before { background: #94a3b8; }
+
+/* Result count */
+.result-count {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 12px;
+    min-height: 20px;
+}
+
 /* Book Card */
 .book-card {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    padding: 20px;
+    padding: 16px;
     transition: all var(--transition);
     display: flex;
     flex-direction: column;
@@ -366,30 +456,45 @@ button {
     transform: translateY(-2px);
 }
 
+.book-card .book-card-top {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
 .book-card .book-cover {
-    width: 48px;
-    height: 64px;
+    width: 64px;
+    height: 86px;
     border-radius: 6px;
     background: linear-gradient(135deg, #0891b2, #06b6d4);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
     flex-shrink: 0;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.book-card .book-cover.has-cover {
+    background: var(--color-border);
 }
 
 .book-card .book-cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .book-card .book-info {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .book-card .book-title {
@@ -399,13 +504,13 @@ button {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .book-card .book-author {
     font-size: 0.8rem;
     color: var(--color-text-secondary);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 /* Progress Bar */
