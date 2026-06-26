@@ -316,3 +316,586 @@ button {
     background: rgba(79, 70, 229, 0.2);
     color: var(--color-text);
 }
+
+/* ============================================
+   Reading (WeRead) Module Styles
+   ============================================ */
+
+/* Stats Card */
+.stat-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    text-align: center;
+    transition: all var(--transition);
+}
+
+.stat-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-card .stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+.stat-card .stat-label {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+}
+
+/* Book Card */
+.book-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card:hover {
+    border-color: #06b6d4;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.book-card .book-cover {
+    width: 48px;
+    height: 64px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #0891b2, #06b6d4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.book-card .book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-card .book-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.book-card .book-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+}
+
+.book-card .book-author {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    width: 100%;
+    height: 6px;
+    background: var(--color-border);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.8s ease;
+    background: linear-gradient(90deg, #06b6d4, #0891b2);
+}
+
+.progress-bar-fill.low {
+    background: linear-gradient(90deg, #94a3b8, #64748b);
+}
+
+.progress-bar-fill.mid {
+    background: linear-gradient(90deg, #06b6d4, #0891b2);
+}
+
+.progress-bar-fill.high {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.progress-bar-fill.done {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.book-card .progress-text {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    margin-top: 6px;
+}
+
+/* Book Status Badge */
+.book-status {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.book-status.reading {
+    background: rgba(6, 182, 212, 0.1);
+    color: #0891b2;
+}
+
+.book-status.finished {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+}
+
+.book-status.unread {
+    background: rgba(148, 163, 184, 0.1);
+    color: #64748b;
+}
+
+[data-theme="dark"] .book-status.reading {
+    background: rgba(6, 182, 212, 0.15);
+    color: #22d3ee;
+}
+
+[data-theme="dark"] .book-status.finished {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+}
+
+[data-theme="dark"] .book-status.unread {
+    background: rgba(148, 163, 184, 0.12);
+    color: #94a3b8;
+}
+
+/* Book Category Badge */
+.book-category {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    background: var(--color-bg);
+    color: var(--color-text-secondary);
+}
+
+/* ============================================
+   Learning Module Styles
+   ============================================ */
+
+/* Plan Card */
+.plan-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all var(--transition);
+}
+
+.plan-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Plan Header */
+.plan-header {
+    padding: 20px 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    user-select: none;
+}
+
+.plan-header:hover {
+    background: var(--color-bg);
+}
+
+.plan-header .plan-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.plan-header .plan-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.plan-header .plan-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Priority Badge */
+.priority-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.priority-badge.high {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.priority-badge.medium {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.priority-badge.low {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+[data-theme="dark"] .priority-badge.high {
+    background: rgba(239, 68, 68, 0.15);
+}
+
+[data-theme="dark"] .priority-badge.medium {
+    background: rgba(245, 158, 11, 0.15);
+}
+
+[data-theme="dark"] .priority-badge.low {
+    background: rgba(59, 130, 246, 0.15);
+}
+
+/* Progress Ring */
+.progress-ring-container {
+    flex-shrink: 0;
+    position: relative;
+    width: 56px;
+    height: 56px;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring .bg-circle {
+    fill: none;
+    stroke: var(--color-border);
+    stroke-width: 4;
+}
+
+.progress-ring .fg-circle {
+    fill: none;
+    stroke: #f59e0b;
+    stroke-width: 4;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.8s ease;
+}
+
+.progress-ring-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.plan-header .expand-icon {
+    flex-shrink: 0;
+    transition: transform var(--transition);
+    color: var(--color-text-secondary);
+}
+
+.plan-card.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* Plan Content (Markdown body) */
+.plan-content {
+    display: none;
+    padding: 0 24px 24px;
+    border-top: 1px solid var(--color-border);
+}
+
+.plan-card.expanded .plan-content {
+    display: block;
+}
+
+/* Plan Footer */
+.plan-footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.plan-footer .plan-tag {
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    background: var(--color-bg);
+    color: var(--color-text-secondary);
+}
+
+.plan-footer .plan-deadline {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-left: auto;
+}
+
+.plan-footer .plan-deadline.overdue {
+    color: #ef4444;
+}
+
+/* Markdown Content Styles (prose) */
+.markdown-body {
+    line-height: 1.8;
+    color: var(--color-text);
+    font-size: 0.95rem;
+}
+
+.markdown-body h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1.5em 0 0.8em;
+    color: var(--color-text);
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.markdown-body h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1.5em 0 0.6em;
+    color: var(--color-text);
+}
+
+.markdown-body h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 1.2em 0 0.5em;
+    color: var(--color-text);
+}
+
+.markdown-body p {
+    margin: 0.6em 0;
+}
+
+.markdown-body ul, .markdown-body ol {
+    padding-left: 1.5em;
+    margin: 0.6em 0;
+}
+
+.markdown-body li {
+    margin: 0.3em 0;
+}
+
+.markdown-body input[type="checkbox"] {
+    margin-right: 0.5em;
+    pointer-events: none;
+}
+
+.markdown-body li:has(input[type="checkbox"]:checked) {
+    color: var(--color-text-secondary);
+    text-decoration: line-through;
+}
+
+.markdown-body code {
+    background: var(--color-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    color: #e11d48;
+}
+
+[data-theme="dark"] .markdown-body code {
+    color: #fb7185;
+}
+
+.markdown-body pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    margin: 1em 0;
+    font-size: 0.9em;
+}
+
+.markdown-body pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+}
+
+.markdown-body blockquote {
+    border-left: 3px solid var(--color-primary);
+    padding: 8px 16px;
+    margin: 1em 0;
+    background: var(--color-bg);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--color-text-secondary);
+}
+
+.markdown-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 0.9em;
+}
+
+.markdown-body th, .markdown-body td {
+    border: 1px solid var(--color-border);
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.markdown-body th {
+    background: var(--color-bg);
+    font-weight: 600;
+}
+
+.markdown-body a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.markdown-body a:hover {
+    color: var(--color-primary-light);
+}
+
+.markdown-body hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 1.5em 0;
+}
+
+.markdown-body img {
+    max-width: 100%;
+    border-radius: var(--radius-sm);
+}
+
+/* Plan card embedded markdown - more compact */
+.plan-card .markdown-body h1 {
+    font-size: 1.25rem;
+    margin: 0.8em 0 0.5em;
+}
+
+.plan-card .markdown-body h2 {
+    font-size: 1.05rem;
+    margin: 1em 0 0.4em;
+}
+
+.plan-card .markdown-body h3 {
+    font-size: 0.95rem;
+    margin: 0.8em 0 0.3em;
+}
+
+/* Overview stat card for learning */
+.overview-stat {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    text-align: center;
+    transition: all var(--transition);
+}
+
+.overview-stat:hover {
+    border-color: #f59e0b;
+    box-shadow: var(--shadow-sm);
+}
+
+.overview-stat .overview-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.overview-stat .overview-label {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+}
+
+/* Sync info */
+.sync-info {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* Sync time text */
+.sync-time {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+}
+
+/* Refresh Button */
+.refresh-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition);
+    cursor: pointer;
+}
+
+.refresh-btn:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background: rgba(79, 70, 229, 0.05);
+}
+
+.refresh-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.refresh-btn:disabled:hover {
+    border-color: var(--color-border);
+    color: var(--color-text-secondary);
+    background: var(--color-surface);
+}
+
+/* Spinning animation for refresh icon */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.refresh-icon.spinning {
+    animation: spin 0.8s linear infinite;
+}

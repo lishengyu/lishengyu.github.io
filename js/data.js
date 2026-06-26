@@ -32,3 +32,11 @@ const projects = [
 const skills = [
      "Go", "C", "Unix", "Shell"
 ];
+
+// ========== WeRead Data Source ==========
+// 数据由 scripts/fetch-weread.js + GitHub Actions 自动生成
+// 如果 js/weread-data.json 不存在，使用此默认数据
+const wereadDataUrl = 'js/weread-data.json';
+
+// ========== Learning Plan Index Source ==========
+const learningIndexUrl = 'learning/index.json';
