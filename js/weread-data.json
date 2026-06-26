@@ -1,0 +1,3806 @@
+{
+  "syncedAt": "2026-06-26T03:52:16.644Z",
+  "summary": {
+    "totalBooks": 380,
+    "publicCount": 376,
+    "privateCount": 4,
+    "readingCount": 0,
+    "finishedCount": 0,
+    "unreadCount": 379
+  },
+  "reading": [],
+  "finished": [],
+  "unread": [
+    {
+      "bookId": "814917",
+      "title": "心经",
+      "author": "[唐]玄奘",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/917/814917/t6_814917.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "40527666",
+      "title": "小王子",
+      "author": "圣埃克絮佩里",
+      "cover": "https://cdn.weread.qq.com/weread/cover/32/YueWen_40527666/t6_YueWen_40527666.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "35036079",
+      "title": "厉害的人，早已戒掉了情绪",
+      "author": "MISS蔷薇",
+      "cover": "https://cdn.weread.qq.com/weread/cover/29/YueWen_35036079/t6_YueWen_35036079.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300054149",
+      "title": "相信",
+      "author": "蔡磊",
+      "cover": "https://cdn.weread.qq.com/weread/cover/71/cpplatform_iheluiy1p49t13lmk5k4mb/t6_cpplatform_iheluiy1p49t13lmk5k4mb1680152716.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "35551088",
+      "title": "蛤蟆先生去看心理医生",
+      "author": "罗伯特·戴博德",
+      "cover": "https://cdn.weread.qq.com/weread/cover/81/YueWen_35551088/t6_YueWen_35551088.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300019691",
+      "title": "重塑心灵",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://cdn.weread.qq.com/weread/cover/91/3300019691/t6_3300019691.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300174471",
+      "title": "荒原狼",
+      "author": "[德]赫尔曼·黑塞",
+      "cover": "https://cdn.weread.qq.com/weread/cover/16/cpplatform_4puvfyhhfbl4b7fwpe5tkf/t6_cpplatform_4puvfyhhfbl4b7fwpe5tkf1762157895.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300019688",
+      "title": "心灵的平和之美",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://cdn.weread.qq.com/weread/cover/88/3300019688/t6_3300019688.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22717306",
+      "title": "当教育成为束缚",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/306/22717306/t6_22717306.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300135832",
+      "title": "鸢尾花（“浪漫主义的自由骑士”黑塞，兼具诗意与哲思的故事）",
+      "author": "[德]赫尔曼·黑塞",
+      "cover": "https://cdn.weread.qq.com/weread/cover/21/cpplatform_jygudkr6c7r34kn1dnrrlq/t6_cpplatform_jygudkr6c7r34kn1dnrrlq1740995454.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22717308",
+      "title": "点亮自性之光",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/308/22717308/t6_22717308.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300186329",
+      "title": "人生之书",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://cdn.weread.qq.com/weread/cover/71/cpplatform_a3ynh1yvvgapghdovdjzvo/t6_cpplatform_a3ynh1yvvgapghdovdjzvo1765852098.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22717330",
+      "title": "世界在你心中",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/330/22717330/t6_22717330.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300019682",
+      "title": "你将成为自己的光",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://cdn.weread.qq.com/weread/cover/82/3300019682/t6_3300019682.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300019685",
+      "title": "生命的所有可能：汉、英",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://cdn.weread.qq.com/weread/cover/85/3300019685/t6_3300019685.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300018688",
+      "title": "生命之书：365天的静心冥想",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://cdn.weread.qq.com/weread/cover/88/3300018688/t6_3300018688.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "831995",
+      "title": "瓦尔登湖：世界上最修心的地方",
+      "author": "梭罗",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/995/831995/t6_831995.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "857863",
+      "title": "献给阿尔吉侬的花束",
+      "author": "丹尼尔·凯斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/11/yuewen_857863/t6_yuewen_8578631681827306.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "849752",
+      "title": "哈佛极简经济学",
+      "author": "斯凯恩",
+      "cover": "https://cdn.weread.qq.com/weread/cover/91/YueWen_849752/t6_YueWen_849752.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "755747",
+      "title": "火星救援",
+      "author": "安迪·威尔",
+      "cover": "https://cdn.weread.qq.com/weread/cover/87/YueWen_755747/t6_YueWen_755747.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "823426",
+      "title": "影响力（湛庐经典）",
+      "author": "[美]罗伯特·西奥迪尼",
+      "cover": "https://cdn.weread.qq.com/weread/cover/31/YueWen_823426/t6_YueWen_823426.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "907272",
+      "title": "广岛之恋（法国同名电影原著）",
+      "author": "[法]玛格丽特·杜拉斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/69/YueWen_907272/t6_YueWen_907272.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300077264",
+      "title": "巴巴拉少校（外研社双语读库）",
+      "author": "[英]萧伯纳",
+      "cover": "https://cdn.weread.qq.com/weread/cover/89/cpplatform_mbjf7v2utvcgfsrftbjmdo/t6_cpplatform_mbjf7v2utvcgfsrftbjmdo1699523848.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "855327",
+      "title": "悉达多（果麦经典）",
+      "author": "[德]赫尔曼·黑塞",
+      "cover": "https://cdn.weread.qq.com/weread/cover/68/YueWen_855327/t6_YueWen_855327.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "935536",
+      "title": "百年孤独",
+      "author": "[哥]加西亚•马尔克斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/49/yuewen_935536/t6_yuewen_9355361682243599.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "825681",
+      "title": "人性的枷锁（果麦经典）",
+      "author": "毛姆",
+      "cover": "https://cdn.weread.qq.com/weread/cover/16/YueWen_825681/t6_YueWen_825681.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "839185",
+      "title": "月亮与六便士",
+      "author": "毛姆",
+      "cover": "https://cdn.weread.qq.com/weread/cover/0/YueWen_839185/t6_YueWen_839185.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300146674",
+      "title": "悉达多（知书经典）",
+      "author": "[德]赫尔曼·黑塞",
+      "cover": "https://cdn.weread.qq.com/weread/cover/16/cpplatform_18h5dgzgzjdgpmxtswtqnr/t6_cpplatform_18h5dgzgzjdgpmxtswtqnr1748513001.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "33617657",
+      "title": "平面国（果麦经典）",
+      "author": "埃德温·艾勃特",
+      "cover": "https://cdn.weread.qq.com/weread/cover/76/YueWen_33617657/t6_YueWen_33617657.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300025463",
+      "title": "共产主义原理",
+      "author": "恩格斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/72/cpPlatform_noBZpNWreef9PX9j469oF1/t6_cpPlatform_noBZpNWreef9PX9j469oF1.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300127322",
+      "title": "乌合之众",
+      "author": "[法]古斯塔夫·勒庞",
+      "cover": "https://cdn.weread.qq.com/weread/cover/40/cpplatform_spxfde1hbwdbgctjxvcjxl/t6_cpplatform_spxfde1hbwdbgctjxvcjxl1734949570.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "40527664",
+      "title": "情人（译文40）",
+      "author": "[法]杜拉斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/30/YueWen_40527664/t6_YueWen_40527664.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300143260",
+      "title": "卡耐基人际沟通与为人处事",
+      "author": "[美]戴尔·卡耐基",
+      "cover": "https://cdn.weread.qq.com/weread/cover/2/cpplatform_bif3ptartkuddbuj32bb7m/t6_cpplatform_bif3ptartkuddbuj32bb7m1745835445.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300144134",
+      "title": "源代码",
+      "author": "[美]比尔·盖茨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/23/cpplatform_mgqenwnngw4eqnb1bmexyg/t6_cpplatform_mgqenwnngw4eqnb1bmexyg1747102455.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "909882",
+      "title": "微习惯：简单到不可能失败的自我管理法则",
+      "author": "斯蒂芬·盖斯",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/882/909882/t6_909882.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "40726710",
+      "title": "也许你该找个人聊聊",
+      "author": "洛莉·戈特利布",
+      "cover": "https://cdn.weread.qq.com/weread/cover/63/YueWen_40726710/t6_YueWen_40726710.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "853116",
+      "title": "杀死一只知更鸟（同名电影原著）",
+      "author": "哈珀·李",
+      "cover": "https://cdn.weread.qq.com/weread/cover/32/YueWen_853116/t6_YueWen_853116.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26441414",
+      "title": "霍乱时期的爱情",
+      "author": "[哥]加西亚•马尔克斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/2/yuewen_26441414/t6_yuewen_264414141682244020.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "856177",
+      "title": "廊桥遗梦（梅丽尔·斯特里普主演）",
+      "author": "罗伯特·詹姆斯·沃勒",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/177/856177/t6_856177.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "856137",
+      "title": "堂吉诃德（经典译林）",
+      "author": "[西]塞万提斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/68/YueWen_856137/t6_YueWen_856137.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "809774",
+      "title": "阿甘正传（同名电影原著）",
+      "author": "温斯顿·葛鲁姆",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/774/809774/t6_809774.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "809763",
+      "title": "月亮和六便士",
+      "author": "毛姆",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/763/809763/t6_809763.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "216211",
+      "title": "了不起的盖茨比",
+      "author": "弗朗西斯·司各特·菲茨杰拉德",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/211/216211/t6_216211.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "44026191",
+      "title": "纳瓦尔宝典",
+      "author": "埃里克·乔根森",
+      "cover": "https://cdn.weread.qq.com/weread/cover/89/YueWen_44026191/t6_YueWen_44026191.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26713355",
+      "title": "你当像鸟飞往你的山",
+      "author": "[美]塔拉·韦斯特弗",
+      "cover": "https://cdn.weread.qq.com/weread/cover/22/YueWen_26713355/t6_YueWen_26713355.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "910415",
+      "title": "走出非洲（奥斯卡获奖电影原著）（果麦经典）",
+      "author": "凯伦·布里克森",
+      "cover": "https://cdn.weread.qq.com/weread/cover/92/YueWen_910415/t6_YueWen_910415.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25375869",
+      "title": "人性的枷锁（读客三个圈经典文库）",
+      "author": "毛姆",
+      "cover": "https://cdn.weread.qq.com/weread/cover/85/YueWen_25375869/t6_YueWen_25375869.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "908161",
+      "title": "以幽默的方式过一生",
+      "author": "琢磨先生",
+      "cover": "https://cdn.weread.qq.com/weread/cover/67/YueWen_908161/t6_YueWen_908161.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300163616",
+      "title": "法律篇",
+      "author": "[古希腊]柏拉图",
+      "cover": "https://cdn.weread.qq.com/weread/cover/48/cpplatform_fqklkkrg5bvakvtuhsjkgw/t6_cpplatform_fqklkkrg5bvakvtuhsjkgw1757399176.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300060305",
+      "title": "非暴力沟通（修订版）",
+      "author": "马歇尔·卢森堡",
+      "cover": "https://cdn.weread.qq.com/weread/cover/88/cpplatform_9iwmvppcbjd1kqabdkbe1e/t6_cpplatform_9iwmvppcbjd1kqabdkbe1e1685513342.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "27328527",
+      "title": "洛克菲勒给年轻人的54个忠告",
+      "author": "宋佳恩编著",
+      "cover": "https://cdn.weread.qq.com/weread/cover/70/YueWen_27328527/t6_YueWen_27328527.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "699569",
+      "title": "马克·吐温短篇小说精选",
+      "author": "马克·吐温",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/569/699569/t6_699569.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "853107",
+      "title": "基督山伯爵",
+      "author": "[法]大仲马",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/107/853107/t6_853107.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "856239",
+      "title": "非暴力沟通",
+      "author": "马歇尔·卢森堡",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/239/856239/t6_856239.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "908732",
+      "title": "人性的优点：如何停止忧虑，开创人生（果麦经典）",
+      "author": "卡耐基",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/732/908732/t6_908732.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "29103034",
+      "title": "麦田里的守望者",
+      "author": "J.D.塞林格",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/34/29103034/t6_29103034.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26391930",
+      "title": "我们时代的神经症人格",
+      "author": "卡伦·霍妮",
+      "cover": "https://cdn.weread.qq.com/weread/cover/11/YueWen_26391930/t6_YueWen_26391930.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300054936",
+      "title": "作家榜名著：浮士德",
+      "author": "歌德",
+      "cover": "https://cdn.weread.qq.com/weread/cover/75/cpplatform_ebdmhxcaldhtsw3lnopvo7/t6_cpplatform_ebdmhxcaldhtsw3lnopvo71750850706.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24918942",
+      "title": "海边的卡夫卡",
+      "author": "[日]村上春树",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/942/24918942/t6_24918942.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25169064",
+      "title": "作家榜名著：人性的弱点",
+      "author": "卡耐基",
+      "cover": "https://cdn.weread.qq.com/weread/cover/85/yuewen_25169064/t6_yuewen_251690641750754363.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24919967",
+      "title": "出走十五年",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/15/YueWen_24919967/t6_YueWen_24919967.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24919937",
+      "title": "余秋雨书法（第六卷）：心经译写",
+      "author": "余秋雨",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/937/24919937/t6_24919937.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24919935",
+      "title": "余秋雨书法（第四卷）：屈原译写",
+      "author": "余秋雨",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/935/24919935/t6_24919935.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "41287634",
+      "title": "庄子译写（秋雨合集）",
+      "author": "余秋雨",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/634/41287634/t6_41287634.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "784278",
+      "title": "山河之书",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/48/YueWen_784278/t6_YueWen_784278.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "600412",
+      "title": "山居笔记",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/43/yuewen_600412/t6_yuewen_6004121722501716.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "610531",
+      "title": "摩挲大地",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/50/YueWen_610531/t6_YueWen_610531.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24919979",
+      "title": "文化之贞",
+      "author": "余秋雨",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/979/24919979/t6_24919979.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "520588",
+      "title": "君子之道",
+      "author": "余秋雨",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/588/520588/t6_520588.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24919939",
+      "title": "余秋雨书法（第五卷）：苏轼译写",
+      "author": "余秋雨",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/939/24919939/t6_24919939.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "41287638",
+      "title": "极端之美：举世独有的三项文化",
+      "author": "余秋雨",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/638/41287638/t6_41287638.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "610681",
+      "title": "寻觅中华",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/66/YueWen_610681/t6_YueWen_610681.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26452378",
+      "title": "吾家小史",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/71/YueWen_26452378/t6_YueWen_26452378.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "747188",
+      "title": "中国文脉（便携本）",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/55/YueWen_747188/t6_YueWen_747188.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "784277",
+      "title": "行者无疆",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/83/yuewen_784277/t6_yuewen_7842771722501707.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "589453",
+      "title": "借我一生",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/20/yuewen_589453/t6_yuewen_5894531722501725.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26451996",
+      "title": "北大授课",
+      "author": "余秋雨",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/996/26451996/t6_26451996.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "610463",
+      "title": "千年一叹",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/20/yuewen_610463/t6_yuewen_6104631722501717.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26796451",
+      "title": "唐诗（国学大书院）",
+      "author": "[清]蘅塘退士选编",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/451/26796451/t6_26796451.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "27269633",
+      "title": "课本里的古诗词",
+      "author": "谢琰",
+      "cover": "https://cdn.weread.qq.com/weread/cover/46/YueWen_27269633/t6_YueWen_27269633.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "847307",
+      "title": "唐诗三百首（中华国学经典精粹）",
+      "author": "[清]蘅塘退士选编",
+      "cover": "https://cdn.weread.qq.com/weread/cover/15/YueWen_847307/t6_YueWen_847307.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "33810181",
+      "title": "飞花令里读诗词",
+      "author": "鸿雁",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/181/33810181/t6_33810181.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "838857",
+      "title": "唐诗三百首",
+      "author": "[清]蘅塘退士",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/857/838857/t6_838857.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "37699083",
+      "title": "朦胧诗选新编",
+      "author": "食指 海子",
+      "cover": "https://cdn.weread.qq.com/weread/cover/25/yuewen_37699083/t6_yuewen_376990831701316500.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "854026",
+      "title": "莎士比亚诗歌全编：十四行诗",
+      "author": "莎士比亚",
+      "cover": "https://cdn.weread.qq.com/weread/cover/93/YueWen_854026/t6_YueWen_854026.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300196150",
+      "title": "李煜词集",
+      "author": "[五代]李煜",
+      "cover": "https://cdn.weread.qq.com/weread/cover/73/cpplatform_4wj5qm9musdmodxnh2zldz/t6_cpplatform_4wj5qm9musdmodxnh2zldz1770975130.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300093582",
+      "title": "飞鸟集（中英对照版）",
+      "author": "[印]泰戈尔",
+      "cover": "https://cdn.weread.qq.com/weread/cover/59/cpplatform_bllgdhdlypuvm3z9nb3szt/t6_cpplatform_bllgdhdlypuvm3z9nb3szt1721801759.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "919897",
+      "title": "诗经全集",
+      "author": "佚名",
+      "cover": "https://cdn.weread.qq.com/weread/cover/5/YueWen_919897/t6_YueWen_919897.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "931848",
+      "title": "诗经（果麦经典）",
+      "author": "骆玉明解注 细井徇撰绘",
+      "cover": "https://cdn.weread.qq.com/weread/cover/65/YueWen_931848/t6_YueWen_931848.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "920604",
+      "title": "海子的诗",
+      "author": "海子",
+      "cover": "https://cdn.weread.qq.com/weread/cover/3/YueWen_920604/t6_YueWen_920604.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300053847",
+      "title": "骆玉明古诗词课（读客三个圈经典文库）",
+      "author": "骆玉明",
+      "cover": "https://cdn.weread.qq.com/weread/cover/15/cpplatform_imtdtj356zrdv9eksp6c8c/t6_cpplatform_imtdtj356zrdv9eksp6c8c1679909415.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "23528206",
+      "title": "中国最美古诗词：你应该熟读的中国古诗+你应该熟读的中国古词+你应该熟读的中国古文（全集）",
+      "author": "陈引驰编著",
+      "cover": "https://cdn.weread.qq.com/weread/cover/18/yuewen_23528206/t6_yuewen_235282061678881898.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "216219",
+      "title": "诗里特别有禅",
+      "author": "骆玉明",
+      "cover": "https://cdn.weread.qq.com/weread/cover/47/yuewen_216219/t6_yuewen_2162191709022000.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22478925",
+      "title": "唐诗宋词解：诗为心声，词乃情物",
+      "author": "李劼",
+      "cover": "https://cdn.weread.qq.com/weread/cover/15/YueWen_22478925/t6_YueWen_22478925.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "582096",
+      "title": "纳兰性德全集",
+      "author": "[清]纳兰性德",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/96/582096/t6_582096.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "814857",
+      "title": "飞鸟集",
+      "author": "罗宾德拉纳特·泰戈尔",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/857/814857/t6_814857.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "29793581",
+      "title": "辛弃疾词集",
+      "author": "[宋]辛弃疾",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/581/29793581/t6_29793581.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "814861",
+      "title": "唐诗三百首",
+      "author": "[清]蘅塘退士选编",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/861/814861/t6_814861.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300046425",
+      "title": "古诗十九首",
+      "author": "萧统 编",
+      "cover": "https://cdn.weread.qq.com/weread/cover/11/cpplatform_phrx6lswjaeacydrhvjjv5/t6_cpplatform_phrx6lswjaeacydrhvjjv51673938370.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "793778",
+      "title": "入若耶溪",
+      "author": "王籍",
+      "cover": "https://cdn.weread.qq.com/weread/cover/19/yuewen_793778/t6_yuewen_7937781679654058.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "43168691",
+      "title": "戴老师高能唐诗课",
+      "author": "戴建业",
+      "cover": "https://cdn.weread.qq.com/weread/cover/10/YueWen_43168691/t6_YueWen_43168691.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25444612",
+      "title": "你来人间一趟，你要看看太阳",
+      "author": "海子",
+      "cover": "https://cdn.weread.qq.com/weread/cover/34/YueWen_25444612/t6_YueWen_25444612.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300130520",
+      "title": "高唐赋",
+      "author": "[战国]宋玉",
+      "cover": "https://cdn.weread.qq.com/weread/cover/15/cpplatform_1dhb9b9bnco39qtp9qbbqi/t6_cpplatform_1dhb9b9bnco39qtp9qbbqi1736497559.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "33810155",
+      "title": "红楼梦诗词",
+      "author": "美芹",
+      "cover": "https://cdn.weread.qq.com/weread/cover/6/YueWen_33810155/t6_YueWen_33810155.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300021424",
+      "title": "全唐诗",
+      "author": "[唐]李白",
+      "cover": "https://cdn.weread.qq.com/weread/cover/24/3300021424/t6_3300021424.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300120107",
+      "title": "洛神赋",
+      "author": "[三国]曹植",
+      "cover": "https://cdn.weread.qq.com/weread/cover/11/cpplatform_cxmjukisyk7vvhchitqrec/t6_cpplatform_cxmjukisyk7vvhchitqrec1731054902.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "814415",
+      "title": "人间词话",
+      "author": "[清]王国维",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/415/814415/t6_814415.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "30661873",
+      "title": "儒林外史（经典译林）",
+      "author": "[清]吴敬梓",
+      "cover": "https://cdn.weread.qq.com/weread/cover/52/YueWen_30661873/t6_YueWen_30661873.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "832038",
+      "title": "道德经",
+      "author": "[春秋]老子 李若水译评",
+      "cover": "https://cdn.weread.qq.com/weread/cover/50/YueWen_832038/t6_YueWen_832038.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22297629",
+      "title": "三字经（公版）",
+      "author": "[南宋]王应麟",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/629/22297629/t6_22297629.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "721248",
+      "title": "水经注",
+      "author": "郦道元",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/248/721248/t6_721248.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22791699",
+      "title": "庄子諵譁",
+      "author": "南怀瑾",
+      "cover": "https://cdn.weread.qq.com/weread/cover/19/YueWen_22791699/t6_YueWen_22791699.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25445353",
+      "title": "韩非子（中华国学经典精粹）",
+      "author": "[战国]韩非",
+      "cover": "https://cdn.weread.qq.com/weread/cover/67/YueWen_25445353/t6_YueWen_25445353.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "232883",
+      "title": "春秋左传",
+      "author": "[春秋]左丘明 [春秋]孔子",
+      "cover": "https://cdn.weread.qq.com/weread/cover/18/YueWen_232883/t6_YueWen_232883.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "31129692",
+      "title": "诗人十四个：十四位古代诗人和一位现代闯入者 一场始于1600年前的诗歌沙龙",
+      "author": "黄晓丹",
+      "cover": "https://cdn.weread.qq.com/weread/cover/61/yuewen_31129692/t6_yuewen_311296921774865081.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26087722",
+      "title": "楚辞（果麦经典）",
+      "author": "[战国]屈原等",
+      "cover": "https://cdn.weread.qq.com/weread/cover/24/YueWen_26087722/t6_YueWen_26087722.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25986324",
+      "title": "幽梦影",
+      "author": "张潮 牧语译注",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/324/25986324/t6_25986324.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "661146",
+      "title": "墨子（中华国学经典精粹）",
+      "author": "[战国]墨翟著 焦帅评译",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/146/661146/t6_661146.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "814906",
+      "title": "论语",
+      "author": "孔子及其弟子",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/906/814906/t6_814906.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "39938673",
+      "title": "庄子",
+      "author": "[战国]庄子",
+      "cover": "https://cdn.weread.qq.com/weread/cover/54/YueWen_39938673/t6_YueWen_39938673.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300075287",
+      "title": "周易译注",
+      "author": "黄寿祺 张善文",
+      "cover": "https://cdn.weread.qq.com/weread/cover/6/cpplatform_5vnzbfltfmghfjurfjmyta/t6_cpplatform_5vnzbfltfmghfjurfjmyta1698142424.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22791651",
+      "title": "《金刚经》说什么",
+      "author": "南怀瑾",
+      "cover": "https://cdn.weread.qq.com/weread/cover/87/YueWen_22791651/t6_YueWen_22791651.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300089715",
+      "title": "金刚经",
+      "author": "[后秦]鸠摩罗什",
+      "cover": "https://cdn.weread.qq.com/weread/cover/99/cpplatform_mzs7cvsl2eqpxshtgtxqxp/t6_cpplatform_mzs7cvsl2eqpxshtgtxqxp1720765049.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "34615967",
+      "title": "红楼梦（人民文学版）",
+      "author": "曹雪芹著 无名氏续 程伟元 高鹗整理",
+      "cover": "https://cdn.weread.qq.com/weread/cover/45/YueWen_34615967/t6_YueWen_34615967.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300106417",
+      "title": "四书·五经",
+      "author": "[春秋]孔子",
+      "cover": "https://cdn.weread.qq.com/weread/cover/12/cpplatform_1f1foxqlizdnqwvrcea1s3/t6_cpplatform_1f1foxqlizdnqwvrcea1s31721119729.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "841820",
+      "title": "苏东坡传（纪念典藏版）",
+      "author": "林语堂",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/820/841820/t6_841820.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300087221",
+      "title": "一蓑烟雨任平生：苏轼词（全三册）",
+      "author": "叶嘉莹",
+      "cover": "https://cdn.weread.qq.com/weread/cover/93/cpplatform_whblu6svixqkvempmmmw7u/t6_cpplatform_whblu6svixqkvempmmmw7u1708425562.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22791707",
+      "title": "易经杂说",
+      "author": "南怀瑾",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/707/22791707/t6_22791707.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300189594",
+      "title": "项脊轩志（中国古典美文，归有光名作）",
+      "author": "[明]归有光",
+      "cover": "https://cdn.weread.qq.com/weread/cover/68/cpplatform_ocp4dakiqq1dm8ftd7zr4o/t6_cpplatform_ocp4dakiqq1dm8ftd7zr4o1767076816.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26785380",
+      "title": "美之地图",
+      "author": "米哈埃拉·诺洛茨",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/380/26785380/t6_26785380.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "29629921",
+      "title": "梵高手稿",
+      "author": "文森特·梵高",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/921/29629921/t6_29629921.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "40223839",
+      "title": "新摄影笔记",
+      "author": "宁思潇潇",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/839/40223839/t6_40223839.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "38335160",
+      "title": "如何成为不完美主义者",
+      "author": "斯蒂芬·盖斯",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/160/38335160/t6_38335160.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300014442",
+      "title": "旅行之木",
+      "author": "星野道夫",
+      "cover": "https://cdn.weread.qq.com/weread/cover/42/3300014442/t6_3300014442.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "41414688",
+      "title": "成为可怕的自律人",
+      "author": "马歇尔·古德史密斯 马克·莱特尔",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/688/41414688/t6_41414688.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22719593",
+      "title": "你有多自律，就有多自由",
+      "author": "卡西",
+      "cover": "https://cdn.weread.qq.com/weread/cover/84/yuewen_22719593/t6_yuewen_227195931688619300.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "34354725",
+      "title": "中药配对 能消百病（全面升级版）（第二版）",
+      "author": "袁建业 高俊杰主编",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/725/34354725/t6_34354725.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "695127",
+      "title": "医生的修炼：在不完美中探索行医的真相",
+      "author": "阿图·葛文德  王一方主编",
+      "cover": "https://cdn.weread.qq.com/weread/cover/56/YueWen_695127/t6_YueWen_695127.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300113170",
+      "title": "欢迎来到投资新手村：你的人生不止金钱",
+      "author": "周玖洲 徐涛著 声动活泼编",
+      "cover": "https://cdn.weread.qq.com/weread/cover/14/cpplatform_1ikc5mmvznezvdpydefrsd/t6_cpplatform_1ikc5mmvznezvdpydefrsd1724835559.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "33810600",
+      "title": "高效能人士的七个习惯（30周年纪念版）（全新增订版）",
+      "author": "史蒂芬·柯维",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/600/33810600/t6_33810600.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300110314",
+      "title": "开店创业一本通",
+      "author": "陈达萌",
+      "cover": "https://cdn.weread.qq.com/weread/cover/54/cpplatform_9itnhh794q51fnttwrul6f/t6_cpplatform_9itnhh794q51fnttwrul6f1722934904.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300129526",
+      "title": "简单致富：实现财务自由与富足人生的路线图",
+      "author": "[美]J.L. 柯林斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_vqcegcdissgyqguzg3kfun/t6_cpplatform_vqcegcdissgyqguzg3kfun1736159005.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25717155",
+      "title": "博瑞森快消品营销系列大套装（13本）",
+      "author": "罗宏文 牛玉龙 杨永华 陈海超 刘雷 伯建新 方刚 蒋军 谭长春 余晓雷 吴江萍 高继中",
+      "cover": "https://cdn.weread.qq.com/weread/cover/99/yuewen_25717155/t6_yuewen_257171551678675154.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300099282",
+      "title": "生活的艺术家",
+      "author": "[美]李小龙",
+      "cover": "https://cdn.weread.qq.com/weread/cover/53/cpplatform_jl5bfv3nmb849qb4kisxdj/t6_cpplatform_jl5bfv3nmb849qb4kisxdj1715327363.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25960412",
+      "title": "截拳道之道",
+      "author": "李小龙",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/412/25960412/t6_25960412.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25131292",
+      "title": "李小龙技击法",
+      "author": "李小龙",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/292/25131292/t6_25131292.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "920938",
+      "title": "节日万岁",
+      "author": "高木直子",
+      "cover": "https://cdn.weread.qq.com/weread/cover/19/yuewen_920938/t6_yuewen_9209381721712993.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "851321",
+      "title": "爱丽丝梦游仙境（迪士尼大电影双语阅读）",
+      "author": "美国迪士尼公司",
+      "cover": "https://cdn.weread.qq.com/weread/cover/98/YueWen_851321/t6_YueWen_851321.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "849744",
+      "title": "夏目友人帐",
+      "author": "村井贞之",
+      "cover": "https://cdn.weread.qq.com/weread/cover/62/YueWen_849744/t6_YueWen_849744.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25415645",
+      "title": "一见你就好心情",
+      "author": "莉兹·克里莫",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/645/25415645/t6_25415645.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300036168",
+      "title": "平安小猪",
+      "author": "[英]J.K.罗琳 [英]吉姆·菲尔德",
+      "cover": "https://cdn.weread.qq.com/weread/cover/90/cpPlatform_eCmbjpXyzhH8FDxwGfxCUM/t6_cpPlatform_eCmbjpXyzhH8FDxwGfxCUM.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "917173",
+      "title": "一个人的美食之旅2",
+      "author": "高木直子",
+      "cover": "https://cdn.weread.qq.com/weread/cover/30/YueWen_917173/t6_YueWen_917173.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25731496",
+      "title": "就喜欢你看不惯我又干不掉我的样子4",
+      "author": "白茶",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/496/25731496/t6_25731496.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300079069",
+      "title": "做自己的花（微信读书联合出品）",
+      "author": "月芽",
+      "cover": "https://cdn.weread.qq.com/weread/cover/62/cpplatform_f7rjrqgpkmuaab2tkb1vkh/t6_cpplatform_f7rjrqgpkmuaab2tkb1vkh1700624445.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25028537",
+      "title": "我的生活不可能那么坏",
+      "author": "河尻圭吾",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/537/25028537/t6_25028537.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300090223",
+      "title": "心有花田万事香：我在人间找乐子",
+      "author": "姑苏阿焦",
+      "cover": "https://cdn.weread.qq.com/weread/cover/11/cpplatform_gvrzsajlzb6utvs57uf4rd/t6_cpplatform_gvrzsajlzb6utvs57uf4rd1709793313.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "41493063",
+      "title": "时间从来不语，却回答了所有问题",
+      "author": "季羡林",
+      "cover": "https://cdn.weread.qq.com/weread/cover/48/YueWen_41493063/t6_YueWen_41493063.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300121762",
+      "title": "心有良辰美景，任它春夏秋冬",
+      "author": "汪曾祺 史铁生等",
+      "cover": "https://cdn.weread.qq.com/weread/cover/39/cpplatform_e5omr27d3y9vwplvpacczp/t6_cpplatform_e5omr27d3y9vwplvpacczp1732090640.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300075256",
+      "title": "吾心欢喜，即是归处（微信读书出品）",
+      "author": "李叔同",
+      "cover": "https://cdn.weread.qq.com/weread/cover/30/cpplatform_nqxno1u3fh565j7nvkhzbz/t6_cpplatform_nqxno1u3fh565j7nvkhzbz1702277511.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24264305",
+      "title": "万般滋味都是生活",
+      "author": "丰子恺",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/305/24264305/t6_24264305.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "23492320",
+      "title": "心有猛虎，细嗅蔷薇",
+      "author": "余光中",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/320/23492320/t6_23492320.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26406758",
+      "title": "人间值得（畅销200万册纪念版）",
+      "author": "[日]中村恒子 [日]奥田弘美",
+      "cover": "https://cdn.weread.qq.com/weread/cover/32/yuewen_26406758/t6_yuewen_264067581720754472.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300094517",
+      "title": "一眼千年",
+      "author": "陈寅恪",
+      "cover": "https://cdn.weread.qq.com/weread/cover/15/cpplatform_7z24hkcmqki36cyhrsw4y9/t6_cpplatform_7z24hkcmqki36cyhrsw4y91712649446.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300057902",
+      "title": "觉醒时刻（独家首发）",
+      "author": "鲁迅 陈独秀 李大钊 等",
+      "cover": "https://cdn.weread.qq.com/weread/cover/81/cpplatform_ocwnssv1rubrx54k5uyvbj/t6_cpplatform_ocwnssv1rubrx54k5uyvbj1683355402.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22476814",
+      "title": "人间草木：汪曾祺散文精选集",
+      "author": "汪曾祺",
+      "cover": "https://cdn.weread.qq.com/weread/cover/40/YueWen_22476814/t6_YueWen_22476814.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300024883",
+      "title": "万般滋味，都是生活",
+      "author": "丰子恺",
+      "cover": "https://cdn.weread.qq.com/weread/cover/83/3300024883/t6_3300024883.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300123579",
+      "title": "遇事不决，可问春风",
+      "author": "史铁生等著",
+      "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_2b5hkejzj5u3eykum98sd2/t6_cpplatform_2b5hkejzj5u3eykum98sd21733135284.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "854030",
+      "title": "一生太平凡：鲁迅自述",
+      "author": "鲁迅著 陈漱渝选编",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/30/854030/t6_854030.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300091189",
+      "title": "人生大事 吃喝二字",
+      "author": "梁实秋 汪曾祺 [新加坡]蔡澜 等",
+      "cover": "https://cdn.weread.qq.com/weread/cover/74/cpplatform_w8ezkihm91lthd4gay8szv/t6_cpplatform_w8ezkihm91lthd4gay8szv1710833750.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300074999",
+      "title": "隋唐制度渊源略论稿 唐代政治史述论稿",
+      "author": "陈寅恪",
+      "cover": "https://cdn.weread.qq.com/weread/cover/40/cpplatform_gasyddblklliakrruyagsp/t6_cpplatform_gasyddblklliakrruyagsp1697682274.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300054782",
+      "title": "我在西南联大的日子",
+      "author": "汪曾祺",
+      "cover": "https://cdn.weread.qq.com/weread/cover/51/cpplatform_brqzhvdgkmpqyxaa6f7yyo/t6_cpplatform_brqzhvdgkmpqyxaa6f7yyo1680859340.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "38395153",
+      "title": "活着，得有点兴致",
+      "author": "汪曾祺",
+      "cover": "https://cdn.weread.qq.com/weread/cover/33/YueWen_38395153/t6_YueWen_38395153.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300036570",
+      "title": "西南联大文学通识课",
+      "author": "朱自清 闻一多 浦江清 胡适 陈寅恪",
+      "cover": "https://cdn.weread.qq.com/weread/cover/15/cpPlatform_midiBc6NCBTi2y4p32Zh71/t6_cpPlatform_midiBc6NCBTi2y4p32Zh71.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300138262",
+      "title": "历史的苦心（大学者谈史系列）",
+      "author": "陈寅恪",
+      "cover": "https://cdn.weread.qq.com/weread/cover/90/cpplatform_ittb2qwh2zwarjow44dba3/t6_cpplatform_ittb2qwh2zwarjow44dba31742788474.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300013769",
+      "title": "民国大师列传 · 陈寅恪",
+      "author": "传奇人物编辑部",
+      "cover": "https://cdn.weread.qq.com/weread/cover/69/3300013769/t6_3300013769.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "36609079",
+      "title": "边城",
+      "author": "沈从文",
+      "cover": "https://cdn.weread.qq.com/weread/cover/98/YueWen_36609079/t6_YueWen_36609079.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300114089",
+      "title": "鲁迅：直面惨淡的人生",
+      "author": "鲁迅",
+      "cover": "https://cdn.weread.qq.com/weread/cover/41/cpplatform_pkvc8s5iutt7yxzfwpvesu/t6_cpplatform_pkvc8s5iutt7yxzfwpvesu1725445236.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "844377",
+      "title": "民国语文（上册）",
+      "author": "[清]梁启超 冰心 丰子恺等",
+      "cover": "https://cdn.weread.qq.com/weread/cover/59/YueWen_844377/t6_YueWen_844377.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25290313",
+      "title": "黑羊",
+      "author": "奥古斯托·蒙特罗索",
+      "cover": "https://cdn.weread.qq.com/weread/cover/71/YueWen_25290313/t6_YueWen_25290313.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "32746295",
+      "title": "刑法学讲义：第二版",
+      "author": "罗翔",
+      "cover": "https://cdn.weread.qq.com/weread/cover/48/yuewen_32746295/t6_yuewen_327462951751018804.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "858526",
+      "title": "社会契约论（大师思想集萃）",
+      "author": "[法]卢梭",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/526/858526/t6_858526.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300019618",
+      "title": "刑法罗盘",
+      "author": "罗翔",
+      "cover": "https://cdn.weread.qq.com/weread/cover/18/3300019618/t6_3300019618.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "921459",
+      "title": "理想国",
+      "author": "[古希腊]柏拉图",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/459/921459/t6_921459.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "32444313",
+      "title": "中华人民共和国民法典",
+      "author": "全国人大法工委",
+      "cover": "https://cdn.weread.qq.com/weread/cover/44/YueWen_32444313/t6_YueWen_32444313.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "40457732",
+      "title": "圆圈正义：作为自由前提的信念",
+      "author": "罗翔",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/732/40457732/t6_40457732.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300012940",
+      "title": "法治的细节",
+      "author": "罗翔",
+      "cover": "https://cdn.weread.qq.com/weread/cover/40/3300012940/t6_3300012940.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "818910",
+      "title": "彷徨之刃",
+      "author": "东野圭吾",
+      "cover": "https://cdn.weread.qq.com/weread/cover/33/YueWen_818910/t6_YueWen_818910.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300036397",
+      "title": "虚无的十字架",
+      "author": "东野圭吾",
+      "cover": "https://cdn.weread.qq.com/weread/cover/22/cpPlatform_kboEK7t9eX3aznMwkW7YVz/t6_cpPlatform_kboEK7t9eX3aznMwkW7YVz.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26174310",
+      "title": "送行",
+      "author": "袁哲生",
+      "cover": "https://cdn.weread.qq.com/weread/cover/40/YueWen_26174310/t6_YueWen_26174310.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26435427",
+      "title": "生死疲劳【中国诺奖得主代表作】",
+      "author": "莫言",
+      "cover": "https://cdn.weread.qq.com/weread/cover/79/yuewen_26435427/t6_yuewen_264354271701758059.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "23755617",
+      "title": "郑天挺西南联大日记（全二册）",
+      "author": "郑天挺著 俞国林点校",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/617/23755617/t6_23755617.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25812535",
+      "title": "我这一辈子：老舍中短篇小说选",
+      "author": "老舍",
+      "cover": "https://cdn.weread.qq.com/weread/cover/89/YueWen_25812535/t6_YueWen_25812535.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300024943",
+      "title": "一句顶一万句（2022新版）",
+      "author": "刘震云",
+      "cover": "https://cdn.weread.qq.com/weread/cover/43/3300024943/t6_3300024943.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "834467",
+      "title": "在细雨中呼喊",
+      "author": "余华",
+      "cover": "https://cdn.weread.qq.com/weread/cover/4/yuewen_834467/t6_yuewen_8344671758542700.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300141391",
+      "title": "一个记忆回来了（轻经典）",
+      "author": "余华",
+      "cover": "https://cdn.weread.qq.com/weread/cover/34/cpplatform_766haikegqw6hyseu7bs41/t6_cpplatform_766haikegqw6hyseu7bs411752237713.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300020524",
+      "title": "撒哈拉的故事",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/24/3300020524/t6_3300020524.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355122",
+      "title": "送你一匹马",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/94/yuewen_22355122/t6_yuewen_223551221740050012.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355135",
+      "title": "雨季不再来",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/35/22355135/t6_22355135.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355114",
+      "title": "流星雨",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/14/22355114/t6_22355114.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355133",
+      "title": "撒哈拉的故事",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/54/YueWen_22355133/t6_YueWen_22355133.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355129",
+      "title": "温柔的夜",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/29/22355129/t6_22355129.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355124",
+      "title": "万水千山走遍",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/96/yuewen_22355124/t6_yuewen_223551241752226509.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355118",
+      "title": "我的宝贝",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/69/yuewen_22355118/t6_yuewen_223551181752226555.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300054139",
+      "title": "梦里花落知多少（2023版）",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/80/cpplatform_aj3ciglcr6nx9yvs9uqdst/t6_cpplatform_aj3ciglcr6nx9yvs9uqdst1680094093.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300120756",
+      "title": "三毛传：爱与自由的流浪者",
+      "author": "张曦贤",
+      "cover": "https://cdn.weread.qq.com/weread/cover/55/cpplatform_8bc2h9cirkvaxkucrb1kr7/t6_cpplatform_8bc2h9cirkvaxkucrb1kr71731919894.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300037192",
+      "title": "我的灵魂骑在纸背上",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/78/cpPlatform_8Ncr4TAL66P6Xg9Af6WH63/t6_cpPlatform_8Ncr4TAL66P6Xg9Af6WH63.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355120",
+      "title": "亲爱的三毛",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/92/yuewen_22355120/t6_yuewen_223551201680096467.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355137",
+      "title": "你是我不及的梦",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/37/22355137/t6_22355137.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355131",
+      "title": "稻草人手记",
+      "author": "三毛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/31/22355131/t6_22355131.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300143880",
+      "title": "现代小说十家新读",
+      "author": "钱理群 吴晓东",
+      "cover": "https://cdn.weread.qq.com/weread/cover/7/cpplatform_pzlaewuberfgw4pp8khpuy/t6_cpplatform_pzlaewuberfgw4pp8khpuy1746516449.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "814414",
+      "title": "梁启超家书",
+      "author": "[清]梁启超",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/414/814414/t6_814414.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "31515511",
+      "title": "没有一种生活是可惜的：余华经典散文",
+      "author": "余华",
+      "cover": "https://cdn.weread.qq.com/weread/cover/90/YueWen_31515511/t6_YueWen_31515511.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300144024",
+      "title": "加缪情书集",
+      "author": "[法]阿尔贝·加缪",
+      "cover": "https://cdn.weread.qq.com/weread/cover/37/cpplatform_2a7w8c3x9zsbxqkuza3sub/t6_cpplatform_2a7w8c3x9zsbxqkuza3sub1746773905.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300019667",
+      "title": "必有人重写爱情",
+      "author": "北岛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/67/3300019667/t6_3300019667.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "23303827",
+      "title": "务虚笔记",
+      "author": "史铁生",
+      "cover": "https://cdn.weread.qq.com/weread/cover/4/YueWen_23303827/t6_YueWen_23303827.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "821652",
+      "title": "余秋雨散文",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/60/YueWen_821652/t6_YueWen_821652.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300026077",
+      "title": "月光落在左手上",
+      "author": "余秀华",
+      "cover": "https://cdn.weread.qq.com/weread/cover/31/cpPlatform_fuLnt2noEFmgyyRQvN8d3a/t6_cpPlatform_fuLnt2noEFmgyyRQvN8d3a.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "600142",
+      "title": "文化苦旅",
+      "author": "余秋雨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/53/yuewen_600142/t6_yuewen_6001421715150411.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "913003",
+      "title": "朗读者（全3册）",
+      "author": "董卿主编",
+      "cover": "https://cdn.weread.qq.com/weread/cover/88/YueWen_913003/t6_YueWen_913003.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "30272293",
+      "title": "曾文正公家书",
+      "author": "[清]曾国藩",
+      "cover": "https://cdn.weread.qq.com/weread/cover/12/YueWen_30272293/t6_YueWen_30272293.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "674044",
+      "title": "我与地坛",
+      "author": "史铁生",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/44/674044/t6_674044.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22737189",
+      "title": "病隙碎笔",
+      "author": "史铁生",
+      "cover": "https://cdn.weread.qq.com/weread/cover/3/YueWen_22737189/t6_YueWen_22737189.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300136121",
+      "title": "我二十一岁那年（轻经典）",
+      "author": "史铁生",
+      "cover": "https://cdn.weread.qq.com/weread/cover/17/cpplatform_gf1ft4jucejojffddazgae/t6_cpplatform_gf1ft4jucejojffddazgae1752237713.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "33514741",
+      "title": "我与地坛（插图版）",
+      "author": "史铁生",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/741/33514741/t6_33514741.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "35990222",
+      "title": "史铁生散文",
+      "author": "史铁生",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/222/35990222/t6_35990222.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300137237",
+      "title": "命若琴弦（轻经典）",
+      "author": "史铁生",
+      "cover": "https://cdn.weread.qq.com/weread/cover/43/cpplatform_2rvhszvtyiwikbuk8m757z/t6_cpplatform_2rvhszvtyiwikbuk8m757z1741761942.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300019502",
+      "title": "数字化生存（20周年纪念版）",
+      "author": "Nicholas Negroponte",
+      "cover": "https://cdn.weread.qq.com/weread/cover/2/3300019502/t6_3300019502.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "635672",
+      "title": "长尾理论",
+      "author": "克里斯·安德森",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/672/635672/t6_635672.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "906830",
+      "title": "小米生态链战地笔记",
+      "author": "小米生态链谷仓学院",
+      "cover": "https://cdn.weread.qq.com/weread/cover/18/YueWen_906830/t6_YueWen_906830.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300168227",
+      "title": "孩子：挑战",
+      "author": "[美]鲁道夫·德雷克斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/0/cpplatform_e8jgv6btwwxe6czxrvgdcq/t6_cpplatform_e8jgv6btwwxe6czxrvgdcq1760078418.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "43938792",
+      "title": "游戏力：笑声，激活孩子天性中的合作与勇气",
+      "author": "劳伦斯·科恩",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/792/43938792/t6_43938792.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300048195",
+      "title": "正面管教（修订版）",
+      "author": "简•尼尔森",
+      "cover": "https://cdn.weread.qq.com/weread/cover/33/cpplatform_nxkyuocaxczycncqyfugye/t6_cpplatform_nxkyuocaxczycncqyfugye1675999568.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "913357",
+      "title": "父母的语言：3000万词汇塑造更强大的学习型大脑",
+      "author": "达娜·萨斯金德等",
+      "cover": "https://cdn.weread.qq.com/weread/cover/30/YueWen_913357/t6_YueWen_913357.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "851605",
+      "title": "愿你的青春不负梦想",
+      "author": "俞敏洪",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/605/851605/t6_851605.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300131810",
+      "title": "儿童教育心理学",
+      "author": "[奥]阿尔弗雷德·阿德勒",
+      "cover": "https://cdn.weread.qq.com/weread/cover/30/cpplatform_sdzdknamqjtswqmmxpj8z3/t6_cpplatform_sdzdknamqjtswqmmxpj8z31737453495.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "27522792",
+      "title": "不吼不叫：如何平静地让孩子与父母合作",
+      "author": "罗娜·雷纳",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/792/27522792/t6_27522792.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "736754",
+      "title": "我的情绪为何总被他人左右",
+      "author": "阿尔伯特·埃利斯 阿瑟·兰格",
+      "cover": "https://cdn.weread.qq.com/weread/cover/12/YueWen_736754/t6_YueWen_736754.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "41599909",
+      "title": "心理抚养",
+      "author": "李玫瑾",
+      "cover": "https://cdn.weread.qq.com/weread/cover/50/YueWen_41599909/t6_YueWen_41599909.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22523964",
+      "title": "如父如子（同名电影原著）",
+      "author": "是枝裕和 佐野晶",
+      "cover": "https://cdn.weread.qq.com/weread/cover/13/YueWen_22523964/t6_YueWen_22523964.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "29490302",
+      "title": "《父与子》全集（彩色双语纪念版）",
+      "author": "卜劳恩绘",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/302/29490302/t6_29490302.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "922382",
+      "title": "读书是一辈子的事",
+      "author": "樊登",
+      "cover": "https://cdn.weread.qq.com/weread/cover/48/YueWen_922382/t6_YueWen_922382.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "935106",
+      "title": "无条件养育",
+      "author": "艾尔菲·科恩",
+      "cover": "https://cdn.weread.qq.com/weread/cover/76/YueWen_935106/t6_YueWen_935106.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "216212",
+      "title": "小王子",
+      "author": "[法]安托万·德·圣埃克苏佩里著",
+      "cover": "https://cdn.weread.qq.com/weread/cover/40/yuewen_216212/t6_yuewen_2162121686560140.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "30205487",
+      "title": "成长比成功更重要(一部浓缩了新东方家庭教育智慧与实践的倾力之作)",
+      "author": "俞敏洪",
+      "cover": "https://cdn.weread.qq.com/weread/cover/5/yuewen_30205487/t6_yuewen_302054871714127100.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300072301",
+      "title": "教育的目的（全译本）",
+      "author": "怀特海",
+      "cover": "https://cdn.weread.qq.com/weread/cover/50/cpplatform_7bznxdlh8xg15ynseaafow/t6_cpplatform_7bznxdlh8xg15ynseaafow1695711659.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22415608",
+      "title": "游戏改变人生",
+      "author": "简·麦戈尼格尔",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/608/22415608/t6_22415608.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22796784",
+      "title": "一胜九败：优衣库全球热卖的秘密（全新修订版）",
+      "author": "柳井正",
+      "cover": "https://cdn.weread.qq.com/weread/cover/99/YueWen_22796784/t6_YueWen_22796784.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "23774475",
+      "title": "曾国藩传（张宏杰全新增补版）",
+      "author": "张宏杰",
+      "cover": "https://cdn.weread.qq.com/weread/cover/23/yuewen_23774475/t6_yuewen_237744751687158200.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300007579",
+      "title": "一夜长大【主持人尼格买提个人随笔集】",
+      "author": "尼格买提·热合曼",
+      "cover": "https://rescdn.qqmail.com/weread/cover/579/3300007579/t6_3300007579.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300033212",
+      "title": "毛泽东自述",
+      "author": "毛泽东",
+      "cover": "https://cdn.weread.qq.com/weread/cover/66/cpPlatform_3DiDHfkM253f2QpHJZJBDv/t6_cpPlatform_3DiDHfkM253f2QpHJZJBDv.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "217327",
+      "title": "史蒂夫·乔布斯传",
+      "author": "沃尔特·艾萨克森",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/327/217327/t6_217327.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300070929",
+      "title": "埃隆·马斯克传",
+      "author": "沃尔特·艾萨克森",
+      "cover": "https://cdn.weread.qq.com/weread/cover/37/cpplatform_gmaqcuuuamjkvu7knomjim/t6_cpplatform_gmaqcuuuamjkvu7knomjim1703077934.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "23640906",
+      "title": "毛泽东传（全6卷）",
+      "author": "中共中央文献研究室",
+      "cover": "https://cdn.weread.qq.com/weread/cover/74/YueWen_23640906/t6_YueWen_23640906.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "41151166",
+      "title": "无法直面的人生：鲁迅传（修订本）",
+      "author": "王晓明",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/166/41151166/t6_41151166.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "38493609",
+      "title": "UNIX传奇：历史与回忆",
+      "author": "布莱恩·W.克尼汉",
+      "cover": "https://cdn.weread.qq.com/weread/cover/94/YueWen_38493609/t6_YueWen_38493609.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25242026",
+      "title": "我曾走在崩溃的边缘：俞敏洪亲述新东方创业发展之路",
+      "author": "俞敏洪",
+      "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25242026/t6_YueWen_25242026.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "811613",
+      "title": "一个瑜伽行者的自传",
+      "author": "帕拉宏撒·尤迦南达",
+      "cover": "https://cdn.weread.qq.com/weread/cover/16/YueWen_811613/t6_YueWen_811613.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "815728",
+      "title": "硅谷钢铁侠：埃隆·马斯克的冒险人生",
+      "author": "阿什利·万斯",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/728/815728/t6_815728.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300181273",
+      "title": "唐才子传：带你走进唐代文坛“朋友圈”",
+      "author": "[元]辛文房 尹小林 审校",
+      "cover": "https://cdn.weread.qq.com/weread/cover/78/cpplatform_7ahnazrymq21m68teb2fhb/t6_cpplatform_7ahnazrymq21m68teb2fhb1764818879.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300105892",
+      "title": "范仲淹词全集",
+      "author": "全宋词",
+      "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_ubrwwukmvdyrbcpbw8hcv8/t6_cpplatform_ubrwwukmvdyrbcpbw8hcv81720770393.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26187224",
+      "title": "两宋诗词简史",
+      "author": "戴建业",
+      "cover": "https://cdn.weread.qq.com/weread/cover/8/YueWen_26187224/t6_YueWen_26187224.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300072352",
+      "title": "叶嘉莹论苏轼词",
+      "author": "叶嘉莹",
+      "cover": "https://cdn.weread.qq.com/weread/cover/30/cpplatform_txbnyec7pbsdjm4kepba5m/t6_cpplatform_txbnyec7pbsdjm4kepba5m1695713863.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "620376",
+      "title": "王阳明心学全书",
+      "author": "罗智",
+      "cover": "https://cdn.weread.qq.com/weread/cover/78/YueWen_620376/t6_YueWen_620376.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300078866",
+      "title": "给孩子们的诗园：古诗卷",
+      "author": "叶嘉莹/主编",
+      "cover": "https://cdn.weread.qq.com/weread/cover/11/cpplatform_hcke4usfyysqpqeqfe1xh6/t6_cpplatform_hcke4usfyysqpqeqfe1xh61700548118.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300068783",
+      "title": "唐诗三百首（名师抖音共读版）",
+      "author": "叶嘉莹 等讲读",
+      "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_352rof9fy2xuvpzvqd3mi7/t6_cpplatform_352rof9fy2xuvpzvqd3mi71692858300.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300090415",
+      "title": "寸心如水月：李清照词",
+      "author": "叶嘉莹",
+      "cover": "https://cdn.weread.qq.com/weread/cover/91/cpplatform_w95ouehcq7wcqnbes4efdi/t6_cpplatform_w95ouehcq7wcqnbes4efdi1710145755.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300046754",
+      "title": "人间词话：叶嘉莹讲评本",
+      "author": "[清]王国维 叶嘉莹",
+      "cover": "https://cdn.weread.qq.com/weread/cover/72/cpplatform_ivzjiwbwde7qnjcmxxqzva/t6_cpplatform_ivzjiwbwde7qnjcmxxqzva1674035324.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300190408",
+      "title": "苏轼诗词选",
+      "author": "[宋]苏轼/著",
+      "cover": "https://cdn.weread.qq.com/weread/cover/76/cpplatform_dq9tuqar45mlyptnbiybby/t6_cpplatform_dq9tuqar45mlyptnbiybby1767611964.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300124450",
+      "title": "戴老师高能宋词课",
+      "author": "戴建业",
+      "cover": "https://cdn.weread.qq.com/weread/cover/25/cpplatform_3trcxkhyqamkibtg9ybamx/t6_cpplatform_3trcxkhyqamkibtg9ybamx1733741052.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "34127209",
+      "title": "唐才子传",
+      "author": "关鹏飞译注",
+      "cover": "https://cdn.weread.qq.com/weread/cover/2/YueWen_34127209/t6_YueWen_34127209.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "913502",
+      "title": "李白诗歌赏析",
+      "author": "马玮",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/502/913502/t6_913502.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "913510",
+      "title": "辛弃疾词赏析",
+      "author": "马玮",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/510/913510/t6_913510.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24275985",
+      "title": "贫穷的本质：我们为什么摆脱不了贫穷（修订版）",
+      "author": "[美]阿比吉特·班纳吉 [法]埃斯特·迪弗洛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/80/YueWen_24275985/t6_YueWen_24275985.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "920939",
+      "title": "资本论（超值白金版）",
+      "author": "马克思",
+      "cover": "https://cdn.weread.qq.com/weread/cover/84/YueWen_920939/t6_YueWen_920939.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "650985",
+      "title": "国富论",
+      "author": "亚当·斯密",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/985/650985/t6_650985.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "34355470",
+      "title": "象棋入门与提高：象棋布局精要（升级版）",
+      "author": "刘锦祺编著",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/470/34355470/t6_34355470.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "842288",
+      "title": "国史讲话：春秋",
+      "author": "顾颉刚 童书业",
+      "cover": "https://cdn.weread.qq.com/weread/cover/48/YueWen_842288/t6_YueWen_842288.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "852290",
+      "title": "未来简史：从智人到智神",
+      "author": "尤瓦尔·赫拉利",
+      "cover": "https://cdn.weread.qq.com/weread/cover/44/YueWen_852290/t6_YueWen_852290.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300160461",
+      "title": "如何快速了解一个行业",
+      "author": "肖璟",
+      "cover": "https://cdn.weread.qq.com/weread/cover/10/cpplatform_sg3znank75by5ydmb6p7sj/t6_cpplatform_sg3znank75by5ydmb6p7sj1756275316.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "855812",
+      "title": "人类简史：从动物到上帝",
+      "author": "尤瓦尔·赫拉利",
+      "cover": "https://cdn.weread.qq.com/weread/cover/37/YueWen_855812/t6_YueWen_855812.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22622981",
+      "title": "似水柔情",
+      "author": "王小波",
+      "cover": "https://cdn.weread.qq.com/weread/cover/68/YueWen_22622981/t6_YueWen_22622981.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "912833",
+      "title": "王小波集（全8本）",
+      "author": "王小波",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/833/912833/t6_912833.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26756016",
+      "title": "我胆小如鼠（小文艺·口袋文库）",
+      "author": "余华",
+      "cover": "https://cdn.weread.qq.com/weread/cover/73/YueWen_26756016/t6_YueWen_26756016.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "912825",
+      "title": "沉默的大多数",
+      "author": "王小波",
+      "cover": "https://cdn.weread.qq.com/weread/cover/85/yuewen_912825/t6_yuewen_9128251776069077.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "652123",
+      "title": "黄金时代",
+      "author": "王小波",
+      "cover": "https://cdn.weread.qq.com/weread/cover/95/YueWen_652123/t6_YueWen_652123.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25469764",
+      "title": "世界尽头的咖啡馆",
+      "author": "约翰·史崔勒基",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/764/25469764/t6_25469764.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "907253",
+      "title": "一个人的好天气",
+      "author": "青山七惠",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/253/907253/t6_907253.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22355157",
+      "title": "红玫瑰与白玫瑰",
+      "author": "张爱玲",
+      "cover": "https://cdn.weread.qq.com/weread/cover/20/YueWen_22355157/t6_YueWen_22355157.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "908272",
+      "title": "遇见你真好",
+      "author": "白峻也",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/272/908272/t6_908272.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "35664374",
+      "title": "千门万户",
+      "author": "代哈哈",
+      "cover": "https://cdn.weread.qq.com/weread/cover/10/YueWen_35664374/t6_YueWen_35664374.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25624220",
+      "title": "慢慢，走走又停停",
+      "author": "沈从文",
+      "cover": "https://cdn.weread.qq.com/weread/cover/51/YueWen_25624220/t6_YueWen_25624220.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "40425658",
+      "title": "没事，一切都会好起来的",
+      "author": "Jedit著绘",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/658/40425658/t6_40425658.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300135297",
+      "title": "我是一朵会开花的云",
+      "author": "桃小兔绘",
+      "cover": "https://cdn.weread.qq.com/weread/cover/0/cpplatform_tygrfaaxmj88pmykvbkth6/t6_cpplatform_tygrfaaxmj88pmykvbkth61740564315.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "931851",
+      "title": "清单人生",
+      "author": "弗雷德里克·巴克曼",
+      "cover": "https://cdn.weread.qq.com/weread/cover/89/YueWen_931851/t6_YueWen_931851.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300020664",
+      "title": "本森小姐的甲虫",
+      "author": "蕾秋·乔伊斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/64/3300020664/t6_3300020664.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300030955",
+      "title": "命运",
+      "author": "蔡崇达",
+      "cover": "https://cdn.weread.qq.com/weread/cover/46/cpPlatform_tEnsXcTvcuE69ZuvviMknD/t6_cpPlatform_tEnsXcTvcuE69ZuvviMknD.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "23303656",
+      "title": "契诃夫短篇小说选",
+      "author": "[俄]契诃夫",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/656/23303656/t6_23303656.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "660048",
+      "title": "无声告白",
+      "author": "伍绮诗",
+      "cover": "https://cdn.weread.qq.com/weread/cover/40/YueWen_660048/t6_YueWen_660048.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300071687",
+      "title": "夏日庭院",
+      "author": "汤本香树实",
+      "cover": "https://cdn.weread.qq.com/weread/cover/80/cpplatform_ssjvecv667v5tpt4qm4gxd/t6_cpplatform_ssjvecv667v5tpt4qm4gxd1695287845.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25178379",
+      "title": "千只鹤",
+      "author": "川端康成",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/379/25178379/t6_25178379.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "23065355",
+      "title": "日本文学奖入围及获奖作品精选集（共六册）",
+      "author": "[日]小川糸 [日]是枝裕和等",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/355/23065355/t6_23065355.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "855068",
+      "title": "你的名字。（新海诚同名动画电影小说版）",
+      "author": "新海诚",
+      "cover": "https://cdn.weread.qq.com/weread/cover/10/YueWen_855068/t6_YueWen_855068.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22910624",
+      "title": "人间便利店",
+      "author": "村田沙耶香",
+      "cover": "https://cdn.weread.qq.com/weread/cover/60/YueWen_22910624/t6_YueWen_22910624.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "857254",
+      "title": "假如岁月足够长",
+      "author": "三浦紫苑",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/254/857254/t6_857254.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25178383",
+      "title": "古都（2020版）",
+      "author": "川端康成",
+      "cover": "https://cdn.weread.qq.com/weread/cover/83/25178383/t6_25178383.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "34153786",
+      "title": "东京漫步记",
+      "author": "永井荷风",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/786/34153786/t6_34153786.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300036155",
+      "title": "袭击面包店",
+      "author": "[日]村上春树 [日]卡特·曼施克",
+      "cover": "https://cdn.weread.qq.com/weread/cover/71/cpPlatform_ch45zxQhbyjWgGyNMcYa4n/t6_cpPlatform_ch45zxQhbyjWgGyNMcYa4n.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300106093",
+      "title": "深夜中的栗子",
+      "author": "[日]小川糸",
+      "cover": "https://cdn.weread.qq.com/weread/cover/91/cpplatform_nvlqncalbx61fku9pizpdn/t6_cpplatform_nvlqncalbx61fku9pizpdn1721024149.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "40158307",
+      "title": "生生不息",
+      "author": "范海涛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/70/YueWen_40158307/t6_YueWen_40158307.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300035102",
+      "title": "华为访谈录2",
+      "author": "田涛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/8/cpPlatform_1xyyqUHmxNuGyCMmmVKF9t/t6_cpPlatform_1xyyqUHmxNuGyCMmmVKF9t.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "33040347",
+      "title": "一往无前",
+      "author": "范海涛",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/347/33040347/t6_33040347.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "36579175",
+      "title": "华为访谈录",
+      "author": "田涛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/67/YueWen_36579175/t6_YueWen_36579175.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22799671",
+      "title": "半生缘",
+      "author": "张爱玲",
+      "cover": "https://cdn.weread.qq.com/weread/cover/71/22799671/t6_22799671.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300072295",
+      "title": "太白金星有点烦",
+      "author": "马伯庸",
+      "cover": "https://cdn.weread.qq.com/weread/cover/72/cpplatform_huhykqamxcvke1jfkpqxiv/t6_cpplatform_huhykqamxcvke1jfkpqxiv1695711014.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300003224",
+      "title": "长安的荔枝（同名影视原著）",
+      "author": "马伯庸",
+      "cover": "https://cdn.weread.qq.com/weread/cover/75/cpPlatform_dbb14284a55f1e733b60202b0777255d/t6_cpPlatform_dbb14284a55f1e733b60202b0777255d.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "834464",
+      "title": "活着",
+      "author": "余华",
+      "cover": "https://cdn.weread.qq.com/weread/cover/1/yuewen_834464/t6_yuewen_8344641758521403.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300020163",
+      "title": "我的阿勒泰（马伊琍、周依然、于适主演同名电视剧原著）",
+      "author": "李娟",
+      "cover": "https://cdn.weread.qq.com/weread/cover/31/cpplatform_fy7wyg2acrhxq1vu4yvs9y/t6_cpplatform_fy7wyg2acrhxq1vu4yvs9y1714307419.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24965201",
+      "title": "平凡的世界（全三册）",
+      "author": "路遥",
+      "cover": "https://cdn.weread.qq.com/weread/cover/61/yuewen_24965201/t6_yuewen_249652011682413401.jpg",
+      "secret": true,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "40726681",
+      "title": "焦虑的人",
+      "author": "弗雷德里克·巴克曼",
+      "cover": "https://cdn.weread.qq.com/weread/cover/20/YueWen_40726681/t6_YueWen_40726681.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "814146",
+      "title": "一个叫欧维的男人决定去死（同名电影原著）",
+      "author": "弗雷德里克·巴克曼",
+      "cover": "https://cdn.weread.qq.com/weread/cover/16/yuewen_814146/t6_yuewen_8141461689328417.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "858485",
+      "title": "外婆的道歉信",
+      "author": "弗雷德里克·巴克曼",
+      "cover": "https://cdn.weread.qq.com/weread/cover/86/YueWen_858485/t6_YueWen_858485.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24153285",
+      "title": "时间的礼物：巴克曼治愈小说合集（套装共三册）",
+      "author": "弗雷德里克·巴克曼",
+      "cover": "https://cdn.weread.qq.com/weread/cover/42/YueWen_24153285/t6_YueWen_24153285.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25515176",
+      "title": "几何原本",
+      "author": "欧几里得",
+      "cover": "https://cdn.weread.qq.com/weread/cover/34/YueWen_25515176/t6_YueWen_25515176.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300067516",
+      "title": "数学的雨伞下：理解世界的乐趣",
+      "author": "米卡埃尔·洛奈 克洛伊·布沙伍尔",
+      "cover": "https://cdn.weread.qq.com/weread/cover/32/cpplatform_gzykjdt9bgp57wtxpymzyn/t6_cpplatform_gzykjdt9bgp57wtxpymzyn1692010436.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300060686",
+      "title": "费曼物理学讲义(套装共5册)(新千年版)",
+      "author": "费曼 莱顿 桑兹 戈特利布 法伊弗",
+      "cover": "https://cdn.weread.qq.com/weread/cover/18/cpplatform_39vpq1ljpem97tfh6uduhe/t6_cpplatform_39vpq1ljpem97tfh6uduhe1685947305.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "23514583",
+      "title": "我的世界观",
+      "author": "阿尔伯特·爱因斯坦",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/583/23514583/t6_23514583.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "36968021",
+      "title": "微积分的力量",
+      "author": "史蒂夫·斯托加茨",
+      "cover": "https://cdn.weread.qq.com/weread/cover/31/YueWen_36968021/t6_YueWen_36968021.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300067598",
+      "title": "笛卡尔几何",
+      "author": "[法]勒内·笛卡尔",
+      "cover": "https://cdn.weread.qq.com/weread/cover/38/cpplatform_idtg3nmkezjyqt9zscu8af/t6_cpplatform_idtg3nmkezjyqt9zscu8af1692089927.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "43168703",
+      "title": "植物的战斗",
+      "author": "汪诘 科学有故事团队",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/703/43168703/t6_43168703.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300060677",
+      "title": "费曼物理学讲义(第1卷)(新千年版)",
+      "author": "费曼 莱顿 桑兹",
+      "cover": "https://cdn.weread.qq.com/weread/cover/10/cpplatform_9mafinnmswgkgufenvrwdp/t6_cpplatform_9mafinnmswgkgufenvrwdp1685946953.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "39457314",
+      "title": "宇宙",
+      "author": "卡尔·萨根",
+      "cover": "https://cdn.weread.qq.com/weread/cover/54/YueWen_39457314/t6_YueWen_39457314.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26211919",
+      "title": "普林斯顿微积分读本（修订版）",
+      "author": "阿德里安·班纳",
+      "cover": "https://cdn.weread.qq.com/weread/cover/51/YueWen_26211919/t6_YueWen_26211919.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300166831",
+      "title": "计算机与人脑",
+      "author": "[美]约翰·冯·诺伊曼",
+      "cover": "https://cdn.weread.qq.com/weread/cover/83/cpplatform_vzcqhn5cqkrr486ev7xasv/t6_cpplatform_vzcqhn5cqkrr486ev7xasv1758880257.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "CB_1E36Dj6Dg0VT6xz6x6CfiBN0",
+      "title": "深入理解计算机系统 (Randal E-Bryant) (Z-Library)",
+      "author": "Unknown",
+      "cover": "https://res.weread.qq.com/wrepub/CB_ApR5AT59zCi46iS6gb8kn49h_parsecover",
+      "secret": true,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "24953136",
+      "title": "嵌入式实时操作系统：RT-Thread设计与实现",
+      "author": "邱祎 熊谱翔 朱天龙",
+      "cover": "https://cdn.weread.qq.com/weread/cover/23/YueWen_24953136/t6_YueWen_24953136.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300032979",
+      "title": "秒懂算法：用常识解读数据结构与算法",
+      "author": "[美]杰伊·温格罗　著",
+      "cover": "https://cdn.weread.qq.com/weread/cover/24/cpPlatform_iZKEwqDT7ynWQ5W9kuJLdo/t6_cpPlatform_iZKEwqDT7ynWQ5W9kuJLdo.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "907761",
+      "title": "程序是怎样跑起来的",
+      "author": "矢泽久雄",
+      "cover": "https://cdn.weread.qq.com/weread/cover/42/YueWen_907761/t6_YueWen_907761.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "30179235",
+      "title": "Go语言高级编程",
+      "author": "柴树杉 曹春晖",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/235/30179235/t6_30179235.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "825606",
+      "title": "深入浅出DPDK",
+      "author": "朱河清等",
+      "cover": "https://cdn.weread.qq.com/weread/cover/73/YueWen_825606/t6_YueWen_825606.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300037545",
+      "title": "Go语言高级开发与实战",
+      "author": "廖显东",
+      "cover": "https://cdn.weread.qq.com/weread/cover/3/cpPlatform_jmYeLMHP1TMoN8xmbGmT88/t6_cpPlatform_jmYeLMHP1TMoN8xmbGmT88.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "33380971",
+      "title": "代码阅读",
+      "author": "季奥米季斯·斯宾耐立思",
+      "cover": "https://cdn.weread.qq.com/weread/cover/16/YueWen_33380971/t6_YueWen_33380971.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26211978",
+      "title": "正则表达式必知必会",
+      "author": "Ben Forta",
+      "cover": "https://cdn.weread.qq.com/weread/cover/36/YueWen_26211978/t6_YueWen_26211978.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300030926",
+      "title": "Linux是怎样工作的",
+      "author": "[日]武内觉　著",
+      "cover": "https://cdn.weread.qq.com/weread/cover/50/cpPlatform_jK3NRfwTrKbGHD5RARduLA/t6_cpPlatform_jK3NRfwTrKbGHD5RARduLA.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300090832",
+      "title": "Linux内核完全注释（20周年版）",
+      "author": "赵炯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/9/cpplatform_6hpw1xk5nxn9vzvps4u3np/t6_cpplatform_6hpw1xk5nxn9vzvps4u3np1710410451.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "30440205",
+      "title": "C Primer Plus（第6版）中文版【最新修订版】",
+      "author": "史蒂芬·普拉达",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/205/30440205/t6_30440205.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300018889",
+      "title": "用Go语言自制解释器",
+      "author": "索斯藤·鲍尔",
+      "cover": "https://cdn.weread.qq.com/weread/cover/89/3300018889/t6_3300018889.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "36700628",
+      "title": "Mastering Linux Kernel Development",
+      "author": "Raghu Bharadwaj",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/628/36700628/t6_36700628.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26211947",
+      "title": "算法（第4版）",
+      "author": "Robert Sedgewick  Kevin Wayne",
+      "cover": "https://cdn.weread.qq.com/weread/cover/42/YueWen_26211947/t6_YueWen_26211947.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "621815",
+      "title": "Linux内核探秘：深入解析文件系统和设备驱动的架构与设计",
+      "author": "高剑林",
+      "cover": "https://cdn.weread.qq.com/weread/cover/87/YueWen_621815/t6_YueWen_621815.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "30179184",
+      "title": "操作系统导论",
+      "author": "雷姆兹·H.阿帕希杜塞尔 安德莉亚·C.阿帕希杜塞尔",
+      "cover": "https://cdn.weread.qq.com/weread/cover/71/YueWen_30179184/t6_YueWen_30179184.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "36702415",
+      "title": "Mastering Wireshark",
+      "author": "Charit Mishra",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/415/36702415/t6_36702415.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22653765",
+      "title": "Wireshark网络分析的艺术",
+      "author": "林沛满",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/765/22653765/t6_22653765.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "40107878",
+      "title": "剑指Offer（专项突破版）：数据结构与算法名企面试题精讲",
+      "author": "何海涛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/45/YueWen_40107878/t6_YueWen_40107878.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "30210741",
+      "title": "Linux内核深度解析",
+      "author": "余华兵",
+      "cover": "https://cdn.weread.qq.com/weread/cover/52/YueWen_30210741/t6_YueWen_30210741.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "CB_FxG6EQ6Dg0VT6xz6x60g1BhU",
+      "title": "二进制分析实战（打造自己的二进制插桩、分析和反汇编的Linux工具）",
+      "author": "丹尼斯·安德里斯",
+      "cover": "https://res.weread.qq.com/wrepub/CB_1hx1NJ1N94ax6vT6xB9oqFBV_parsecover",
+      "secret": true,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "26211809",
+      "title": "HTTP权威指南",
+      "author": "David Gourley  Brian Totty等",
+      "cover": "https://cdn.weread.qq.com/weread/cover/59/YueWen_26211809/t6_YueWen_26211809.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "33381009",
+      "title": "编码：隐匿在计算机软硬件背后的语言",
+      "author": "查尔斯.佩措尔德",
+      "cover": "https://cdn.weread.qq.com/weread/cover/21/yuewen_33381009/t6_yuewen_333810091708675208.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300107269",
+      "title": "设计模式：可复用面向对象软件的基础（典藏版）",
+      "author": "埃里克·伽玛",
+      "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_x4a6kx16xxr45uo3ynp8gv/t6_cpplatform_x4a6kx16xxr45uo3ynp8gv1721638854.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "729213",
+      "title": "Vim实用技巧",
+      "author": "Drew Neil",
+      "cover": "https://cdn.weread.qq.com/weread/cover/34/YueWen_729213/t6_YueWen_729213.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "35243018",
+      "title": "C专家编程",
+      "author": "彼得·范德林登",
+      "cover": "https://cdn.weread.qq.com/weread/cover/64/YueWen_35243018/t6_YueWen_35243018.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "687994",
+      "title": "编程之美",
+      "author": "《编程之美》小组",
+      "cover": "https://cdn.weread.qq.com/weread/cover/19/YueWen_687994/t6_YueWen_687994.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "729216",
+      "title": "Wireshark网络分析就这么简单",
+      "author": "林沛满",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/216/729216/t6_729216.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300195474",
+      "title": "马斯克2026访谈：AGI倒计时与未来全景",
+      "author": "尤晓东",
+      "cover": "https://cdn.weread.qq.com/weread/cover/90/cpplatform_mkk1mo31dqtisbvahkv4d2/t6_cpplatform_mkk1mo31dqtisbvahkv4d21770795807.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "43134597",
+      "title": "CPU通识课",
+      "author": "靳国杰 张戈",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/597/43134597/t6_43134597.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "603247",
+      "title": "Linux内核设计的艺术：图解Linux操作系统架构设计与实现原理（第2版）",
+      "author": "新设计团队",
+      "cover": "https://cdn.weread.qq.com/weread/cover/56/YueWen_603247/t6_YueWen_603247.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "39201628",
+      "title": "秒懂设计模式",
+      "author": "刘韬",
+      "cover": "https://cdn.weread.qq.com/weread/cover/95/YueWen_39201628/t6_YueWen_39201628.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "22692216",
+      "title": "路由与交换技术",
+      "author": "赵新胜 陈美娟",
+      "cover": "https://cdn.weread.qq.com/weread/cover/28/YueWen_22692216/t6_YueWen_22692216.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "680309",
+      "title": "剑指Offer",
+      "author": "何海涛著",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/309/680309/t6_680309.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "915628",
+      "title": "中国哲学简史（插图修订版）",
+      "author": "冯友兰",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/628/915628/t6_915628.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "25622039",
+      "title": "上帝掷骰子吗？：量子物理史话（升级版）",
+      "author": "曹天元",
+      "cover": "https://cdn.weread.qq.com/weread/cover/87/YueWen_25622039/t6_YueWen_25622039.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "819025",
+      "title": "胡适的北大哲学课（卷一）",
+      "author": "胡适",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/25/819025/t6_819025.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300116408",
+      "title": "中国哲学史",
+      "author": "冯友兰",
+      "cover": "https://cdn.weread.qq.com/weread/cover/91/cpplatform_oaswiqktbmgsjqltnxafxh/t6_cpplatform_oaswiqktbmgsjqltnxafxh1727426410.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300100019",
+      "title": "生活的哲学",
+      "author": "[美]李小龙",
+      "cover": "https://cdn.weread.qq.com/weread/cover/8/cpplatform_c6i17frqkq2c1lsjx2b5xr/t6_cpplatform_c6i17frqkq2c1lsjx2b5xr1715745148.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "931897",
+      "title": "中国哲学简史",
+      "author": "冯友兰",
+      "cover": "https://cdn.weread.qq.com/weread/cover/19/YueWen_931897/t6_YueWen_931897.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300143881",
+      "title": "大哲学家",
+      "author": "[英]布莱恩·麦基",
+      "cover": "https://cdn.weread.qq.com/weread/cover/32/cpplatform_qfxcrjggcktfbk4huprd7x/t6_cpplatform_qfxcrjggcktfbk4huprd7x1746516458.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "33628204",
+      "title": "认知觉醒：开启自我改变的原动力",
+      "author": "周岭",
+      "cover": "https://cdn.weread.qq.com/weread/cover/86/YueWen_33628204/t6_YueWen_33628204.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "3300014422",
+      "title": "从惊奇开始：青少年哲学第一课",
+      "author": "刘擎  等",
+      "cover": "https://cdn.weread.qq.com/weread/cover/22/3300014422/t6_3300014422.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "38887466",
+      "title": "哲学小史：西方哲学40讲",
+      "author": "奈杰尔·沃伯顿",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/466/38887466/t6_38887466.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    },
+    {
+      "bookId": "42724927",
+      "title": "西方哲学史讲演录",
+      "author": "赵林",
+      "cover": "https://cdn.weread.qq.com/weread/cover/67/YueWen_42724927/t6_YueWen_42724927.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": ""
+    }
+  ],
+  "stats": null
+}
