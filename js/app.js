@@ -662,7 +662,7 @@ class LearningRenderer {
                 card.classList.toggle('expanded');
 
                 // Load markdown content on first expand
-                if (!wasExpanded && !card.dataset.loaded) {
+                if (!wasExpanded && card.dataset.loaded !== 'true') {
                     this.loadPlanContent(card, card.dataset.planFile);
                 }
             });
