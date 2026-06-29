@@ -682,11 +682,12 @@ class LearningRenderer {
 
             // Use marked.js to render markdown
             if (typeof marked !== 'undefined') {
-                marked.setOptions({
+                // marked v5+ removed setOptions, use parse() second argument
+                const html = marked.parse(md, {
                     gfm: true,
                     breaks: false,
                 });
-                contentDiv.innerHTML = `<div class="markdown-body">${marked.parse(md)}</div>`;
+                contentDiv.innerHTML = `<div class="markdown-body">${html}</div>`;
             } else {
                 // Fallback: escape and show as pre
                 contentDiv.innerHTML = `<pre class="markdown-body">${this.escapeHtml(md)}</pre>`;
