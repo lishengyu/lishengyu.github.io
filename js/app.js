@@ -233,6 +233,7 @@ class ReadingRenderer {
         this.currentTag = 'all';
         this.currentCategory = null;
         this.searchQuery = '';
+        this.currentSort = 'default';
         this.refreshing = false;
         this.init();
     }
@@ -246,6 +247,7 @@ class ReadingRenderer {
             this.renderSyncTime();
             this.setupTagFilter();
             this.setupSearch();
+            this.setupSort();
         }
         this.hideLoading();
         this.setupRefresh();
@@ -338,12 +340,26 @@ class ReadingRenderer {
         if (!container || !this.data) return;
 
         const s = this.data.summary;
+        const st = this.data.stats || {};
         const stats = [
             { value: s.totalBooks || 0, label: '书架总计', icon: '📚', color: 'indigo' },
             { value: s.readingCount || 0, label: '在读', icon: '📖', color: 'cyan' },
             { value: s.finishedCount || 0, label: '已读完', icon: '✅', color: 'emerald' },
             { value: s.unreadCount || 0, label: '未开始', icon: '📕', color: 'slate' },
         ];
+
+        // 如果有阅读统计数据，追加展示
+        if (st.totalReadDays) {
+            stats.push({ value: st.totalReadDays, label: '阅读天数', icon: '📅', color: 'amber' });
+        }
+        if (st.readBooksCount) {
+            stats.push({ value: st.readBooksCount, label: '读完本数', icon: '🏆', color: 'rose' });
+        }
+        if (st.notesCount) {
+            stats.push({ value: st.notesCount, label: '笔记条数', icon: '📝', color: 'violet' });
+        }
+
+        container.className = `grid grid-cols-2 md:grid-cols-${Math.min(stats.length, 4)} gap-4 mb-10`;
 
         container.innerHTML = stats.map(stat => `
             <div class="stat-card stat-card-${stat.color}">
@@ -380,7 +396,42 @@ class ReadingRenderer {
                 (b.author && b.author.toLowerCase().includes(q))
             );
         }
+        // 排序
+        all = this.sortBooks(all);
         return all;
+    }
+
+    sortBooks(books) {
+        switch (this.currentSort) {
+            case 'title':
+                // 按书名排序（忽略大小写）
+                return [...books].sort((a, b) => {
+                    const titleA = (a.title || '').toLowerCase();
+                    const titleB = (b.title || '').toLowerCase();
+                    return titleA.localeCompare(titleB, 'zh-CN');
+                });
+            case 'progress':
+                // 按阅读进度降序（进度高的在前）
+                return [...books].sort((a, b) => (b.progress || 0) - (a.progress || 0));
+            case 'category':
+                // 按分类排序，同类内按书名排序
+                return [...books].sort((a, b) => {
+                    const catA = a.category || '';
+                    const catB = b.category || '';
+                    if (catA !== catB) return catA.localeCompare(catB, 'zh-CN');
+                    const titleA = (a.title || '').toLowerCase();
+                    const titleB = (b.title || '').toLowerCase();
+                    return titleA.localeCompare(titleB, 'zh-CN');
+                });
+            default:
+                // 默认排序：按状态分组（在读 > 已读完 > 未开始），同状态按进度降序
+                return [...books].sort((a, b) => {
+                    const statusOrder = { reading: 0, finished: 1, unread: 2 };
+                    const orderDiff = (statusOrder[a.status] || 3) - (statusOrder[b.status] || 3);
+                    if (orderDiff !== 0) return orderDiff;
+                    return (b.progress || 0) - (a.progress || 0);
+                });
+        }
     }
 
     renderCategoryTags() {
@@ -453,6 +504,17 @@ class ReadingRenderer {
             document.querySelectorAll('#reading-tags .tag-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             this.currentTag = btn.dataset.tag;
+            this.renderBooks();
+        });
+    }
+
+    setupSort() {
+        document.getElementById('reading-sort')?.addEventListener('click', (e) => {
+            const btn = e.target.closest('.sort-btn');
+            if (!btn) return;
+            document.querySelectorAll('#reading-sort .sort-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            this.currentSort = btn.dataset.sort;
             this.renderBooks();
         });
     }

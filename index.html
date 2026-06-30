@@ -209,11 +209,20 @@
                 </div>
 
                 <!-- Filter Tags -->
-                <div class="flex flex-wrap gap-2 mb-3" id="reading-tags">
-                    <button class="tag-btn active px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="all">全部</button>
-                    <button class="tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="reading">在读</button>
-                    <button class="tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="finished">已读完</button>
-                    <button class="tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="unread">未开始</button>
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                    <div class="flex flex-wrap gap-2 flex-1" id="reading-tags">
+                        <button class="tag-btn active px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="all">全部</button>
+                        <button class="tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="reading">在读</button>
+                        <button class="tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="finished">已读完</button>
+                        <button class="tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="unread">未开始</button>
+                    </div>
+                    <div class="flex items-center gap-1" id="reading-sort">
+                        <span class="text-xs text-gray-400 mr-1">排序:</span>
+                        <button class="sort-btn active px-2.5 py-1 rounded-full text-xs font-medium transition-all" data-sort="default">默认</button>
+                        <button class="sort-btn px-2.5 py-1 rounded-full text-xs font-medium transition-all" data-sort="title">书名</button>
+                        <button class="sort-btn px-2.5 py-1 rounded-full text-xs font-medium transition-all" data-sort="progress">阅读进度</button>
+                        <button class="sort-btn px-2.5 py-1 rounded-full text-xs font-medium transition-all" data-sort="category">分类</button>
+                    </div>
                 </div>
 
                 <!-- Category Tags (dynamic) -->

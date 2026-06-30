@@ -106,8 +106,8 @@ async function fetchProgress(bookIds) {
     console.log('📖 正在获取阅读进度...');
     const progressMap = {};
 
-    // 批量获取进度（限制前30本避免超时）
-    const ids = bookIds.slice(0, 30);
+    // 批量获取进度（最多50本，超时时间放宽到60s）
+    const ids = bookIds.slice(0, 50);
     for (const bookId of ids) {
         try {
             const data = await callApi('/book/getprogress', { bookId });
@@ -116,10 +116,11 @@ async function fetchProgress(bookIds) {
                 chapterUid: data.chapterUid,
                 chapterOffset: data.chapterOffset,
                 chapterTitle: data.chapterTitle || '',
+                lastRead: data.lastReadTime || data.timestamp || 0,
             };
         } catch (e) {
             // 单本书获取失败不影响整体
-            progressMap[bookId] = { progress: 0 };
+            progressMap[bookId] = { progress: 0, lastRead: 0 };
         }
     }
 
@@ -159,23 +160,27 @@ async function main() {
             ...book,
             progress: progress[book.bookId]?.progress || 0,
             chapterTitle: progress[book.bookId]?.chapterTitle || '',
+            lastRead: progress[book.bookId]?.lastRead || 0,
         }));
         const albumsWithProgress = shelf.albums.map(album => ({
             ...album,
             progress: progress[album.bookId]?.progress || 0,
             chapterTitle: progress[album.bookId]?.chapterTitle || '',
+            lastRead: progress[album.bookId]?.lastRead || 0,
         }));
 
-        // 4. 按进度排序（在读的排前面）
+        // 4. 按进度和最近阅读排序分组
         const reading = [...booksWithProgress, ...albumsWithProgress]
             .filter(item => item.progress > 0 && item.progress < 100)
-            .sort((a, b) => b.progress - a.progress);
+            .sort((a, b) => (b.lastRead || 0) - (a.lastRead || 0));
 
         const finished = [...booksWithProgress, ...albumsWithProgress]
-            .filter(item => item.progress >= 100);
+            .filter(item => item.progress >= 100)
+            .sort((a, b) => (b.lastRead || 0) - (a.lastRead || 0));
 
         const unread = [...booksWithProgress, ...albumsWithProgress]
-            .filter(item => item.progress === 0);
+            .filter(item => item.progress === 0)
+            .sort((a, b) => (b.lastRead || 0) - (a.lastRead || 0));
 
         // 5. 获取阅读统计
         const stats = await fetchReadStats();
