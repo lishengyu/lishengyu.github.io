@@ -817,23 +817,154 @@ class LearningRenderer {
         return div.innerHTML;
     }
 }
+// ========== Auth Manager ==========
+// 密码以 SHA-256 哈希存储，不会在源码中暴露明文。
+// 修改密码：在终端运行 `python -c "import hashlib; print(hashlib.sha256('你的密码'.encode()).hexdigest())"`
+// 将输出结果替换下方的哈希值即可。
+const AUTH_PASSWORD_HASH = 'd1c15e0bd2cac46b660701a55b409bb291ddae894246674726bb6a57a28fb02';
+
+class AuthManager {
+    constructor() {
+        this.isAuthenticated = false;
+        this.githubToken = null;
+        this.init();
+    }
+
+    init() {
+        this.isAuthenticated = sessionStorage.getItem('life_auth') === 'true';
+        this.githubToken = sessionStorage.getItem('life_token') || null;
+        this.updateUI();
+        this.setupLoginModal();
+    }
+
+    updateUI() {
+        const loginBtn = document.getElementById('life-login-btn');
+        const syncBtn = document.getElementById('life-sync-btn');
+        const syncStatus = document.getElementById('life-sync-status');
+
+        if (loginBtn) {
+            if (this.isAuthenticated) {
+                loginBtn.innerHTML = '🔓 退出';
+                loginBtn.classList.add('logged-in');
+                loginBtn.title = '点击退出登录';
+            } else {
+                loginBtn.innerHTML = '🔒 登录';
+                loginBtn.classList.remove('logged-in');
+                loginBtn.title = '登录以编辑记录';
+            }
+        }
+
+        if (syncBtn) {
+            const hasToken = this.isAuthenticated && !!this.githubToken;
+            syncBtn.classList.toggle('hidden', !hasToken);
+        }
+        if (syncStatus) {
+            syncStatus.classList.add('hidden');
+            syncStatus.textContent = '';
+        }
+    }
+
+    setupLoginModal() {
+        document.getElementById('life-login-btn')?.addEventListener('click', () => {
+            if (this.isAuthenticated) {
+                if (confirm('确定要退出登录吗？未同步的数据将保留在本地。')) {
+                    this.logout();
+                    document.dispatchEvent(new CustomEvent('life-auth-changed', { detail: { authenticated: false } }));
+                }
+            } else {
+                document.getElementById('life-login-modal-overlay')?.classList.remove('hidden');
+                document.getElementById('login-password')?.focus();
+            }
+        });
+
+        document.getElementById('life-login-modal-close')?.addEventListener('click', () => {
+            document.getElementById('life-login-modal-overlay')?.classList.add('hidden');
+        });
+
+        document.getElementById('life-login-modal-overlay')?.addEventListener('click', (e) => {
+            if (e.target.id === 'life-login-modal-overlay') {
+                e.currentTarget.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('life-login-form')?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const password = document.getElementById('login-password')?.value || '';
+            const token = document.getElementById('login-token')?.value?.trim() || '';
+            const errorEl = document.getElementById('life-login-error');
+
+            // SHA-256 哈希比对，明文密码不会出现在代码中
+            const encoder = new TextEncoder();
+            const hashBuffer = await crypto.subtle.digest('SHA-256', encoder.encode(password));
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+            if (hashHex !== AUTH_PASSWORD_HASH) {
+                if (errorEl) {
+                    errorEl.textContent = '❌ 密码错误，请重试';
+                    errorEl.classList.remove('hidden');
+                }
+                return;
+            }
+
+            this.isAuthenticated = true;
+            this.githubToken = token || null;
+            sessionStorage.setItem('life_auth', 'true');
+            if (this.githubToken) {
+                sessionStorage.setItem('life_token', this.githubToken);
+            }
+            this.updateUI();
+
+            document.getElementById('life-login-modal-overlay')?.classList.add('hidden');
+            document.getElementById('life-login-form')?.reset();
+            errorEl?.classList.add('hidden');
+
+            document.dispatchEvent(new CustomEvent('life-auth-changed', {
+                detail: { authenticated: true, token: this.githubToken }
+            }));
+        });
+    }
+
+    logout() {
+        this.isAuthenticated = false;
+        this.githubToken = null;
+        sessionStorage.removeItem('life_auth');
+        sessionStorage.removeItem('life_token');
+        this.updateUI();
+    }
+}
+
 // ========== Life Renderer ==========
 class LifeRenderer {
-    constructor() {
+    constructor(authManager) {
+        this.auth = authManager;
         this.moments = [];
         this.exercises = [];
         this.goals = {};
+        this.seedMoments = [];
+        this.seedExercises = [];
+        this.seedGoals = {};
         this.currentTab = 'moments';
         this.momentTag = 'all';
         this.exerciseType = 'all';
         this.chartFormat = 'line';
         this.chartInstance = null;
+        this.editingMomentId = null;
+        this.editingExerciseId = null;
         this.init();
     }
 
     async init() {
         await Promise.all([this.loadMoments(), this.loadExercises()]);
         this.setupTabs();
+        this.setupFAB();
+        this.setupModalHandlers();
+        this.setupAuthListeners();
+        this.renderAll();
+        this.hideLoading();
+    }
+
+    renderAll() {
         this.renderMomentsStats();
         this.renderMomentsTags();
         this.renderMoments();
@@ -843,16 +974,32 @@ class LifeRenderer {
         this.renderExerciseList();
         this.setupChartFormat();
         this.renderChart();
-        this.hideLoading();
+        this.updateFABVisibility();
+        this.updateEditVisibility();
     }
 
     async loadMoments() {
+        // Try localStorage first (user edits take priority)
+        const localData = localStorage.getItem('life_moments_full');
+        if (localData) {
+            try {
+                const parsed = JSON.parse(localData);
+                if (Array.isArray(parsed)) {
+                    this.moments = parsed;
+                    this.moments.sort((a, b) => b.date.localeCompare(a.date));
+                    return;
+                }
+            } catch (e) { /* fall through */ }
+        }
+
+        // Load seed data
         try {
             const response = await fetch(lifeDataUrl + '?t=' + Date.now());
             if (!response.ok) throw new Error('Moments data not found');
-            this.moments = await response.json();
-            // Sort by date descending
+            this.seedMoments = await response.json();
+            this.moments = [...this.seedMoments];
             this.moments.sort((a, b) => b.date.localeCompare(a.date));
+            this._saveLocalMoments();
         } catch (e) {
             console.warn('随笔数据加载失败:', e.message);
             this.moments = [];
@@ -860,14 +1007,31 @@ class LifeRenderer {
     }
 
     async loadExercises() {
+        // Try localStorage first
+        const localData = localStorage.getItem('life_exercises_full');
+        if (localData) {
+            try {
+                const parsed = JSON.parse(localData);
+                if (parsed.exercises && Array.isArray(parsed.exercises)) {
+                    this.exercises = parsed.exercises;
+                    this.goals = parsed.goals || {};
+                    this.exercises.sort((a, b) => b.date.localeCompare(a.date));
+                    return;
+                }
+            } catch (e) { /* fall through */ }
+        }
+
+        // Load seed data
         try {
             const response = await fetch(exerciseDataUrl + '?t=' + Date.now());
             if (!response.ok) throw new Error('Exercise data not found');
             const data = await response.json();
-            this.exercises = data.exercises || [];
-            this.goals = data.goals || {};
-            // Sort by date descending
+            this.seedExercises = data.exercises || [];
+            this.seedGoals = data.goals || {};
+            this.exercises = [...this.seedExercises];
+            this.goals = { ...this.seedGoals };
             this.exercises.sort((a, b) => b.date.localeCompare(a.date));
+            this._saveLocalExercises();
         } catch (e) {
             console.warn('运动数据加载失败:', e.message);
             this.exercises = [];
@@ -884,6 +1048,412 @@ class LifeRenderer {
         }
         if (this.exercises.length === 0) {
             document.getElementById('exercise-empty')?.classList.remove('hidden');
+        }
+    }
+
+    // ===== Auth Integration =====
+    setupAuthListeners() {
+        document.addEventListener('life-auth-changed', (e) => {
+            this.renderAll();
+        });
+
+        document.getElementById('life-sync-btn')?.addEventListener('click', () => {
+            this.syncToGitHub();
+        });
+    }
+
+    updateFABVisibility() {
+        const fab = document.getElementById('life-add-btn');
+        if (fab) {
+            fab.classList.toggle('hidden', !this.auth.isAuthenticated);
+        }
+    }
+
+    updateEditVisibility() {
+        // Already handled in render methods
+    }
+
+    setupFAB() {
+        document.getElementById('life-add-btn')?.addEventListener('click', () => {
+            if (!this.auth.isAuthenticated) return;
+            if (this.currentTab === 'moments') {
+                this.openMomentModal(null);
+            } else {
+                this.openExerciseModal(null);
+            }
+        });
+    }
+
+    // ===== Modal Handlers =====
+    setupModalHandlers() {
+        const overlay = document.getElementById('life-modal-overlay');
+        document.getElementById('life-modal-close')?.addEventListener('click', () => {
+            overlay?.classList.add('hidden');
+        });
+        overlay?.addEventListener('click', (e) => {
+            if (e.target === overlay) overlay.classList.add('hidden');
+        });
+
+        // Type selector
+        document.getElementById('life-modal-type-select')?.addEventListener('click', (e) => {
+            const btn = e.target.closest('.life-modal-type-btn');
+            if (!btn) return;
+            document.querySelectorAll('.life-modal-type-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const type = btn.dataset.type;
+            document.getElementById('life-form-moment')?.classList.toggle('hidden', type !== 'moment');
+            document.getElementById('life-form-exercise')?.classList.toggle('hidden', type !== 'exercise');
+        });
+
+        // Moment form submit
+        document.getElementById('life-form-moment')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.handleMomentSubmit();
+        });
+
+        // Exercise form submit
+        document.getElementById('life-form-exercise')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.handleExerciseSubmit();
+        });
+
+        // Delete buttons in modal
+        document.getElementById('moment-delete-btn')?.addEventListener('click', () => this.handleMomentDelete());
+        document.getElementById('exercise-delete-btn')?.addEventListener('click', () => this.handleExerciseDelete());
+
+        // Moment content char count
+        document.getElementById('moment-content')?.addEventListener('input', (e) => {
+            const count = e.target.value.length;
+            document.getElementById('moment-char-count').textContent = `${count}/500`;
+        });
+
+        // Tag hints
+        document.getElementById('moment-tags-input')?.addEventListener('focus', () => this.renderTagHints());
+    }
+
+    openMomentModal(moment) {
+        const overlay = document.getElementById('life-modal-overlay');
+        const typeSelect = document.getElementById('life-modal-type-select');
+        const momentForm = document.getElementById('life-form-moment');
+        const exerciseForm = document.getElementById('life-form-exercise');
+        const deleteBtn = document.getElementById('moment-delete-btn');
+
+        // Show moment form
+        typeSelect?.querySelectorAll('.life-modal-type-btn').forEach(b => {
+            b.classList.toggle('active', b.dataset.type === 'moment');
+        });
+        momentForm?.classList.remove('hidden');
+        exerciseForm?.classList.add('hidden');
+
+        // Set title
+        const title = document.getElementById('life-modal-title');
+        if (title) title.textContent = moment ? '编辑随笔' : '新增随笔';
+
+        // Fill form
+        if (moment) {
+            this.editingMomentId = moment._id || null;
+            document.getElementById('moment-date').value = moment.date || '';
+            document.getElementById('moment-content').value = moment.content || '';
+            document.getElementById('moment-tags-input').value = (moment.tags || []).join(',');
+            document.getElementById('moment-char-count').textContent = `${(moment.content || '').length}/500`;
+            deleteBtn?.classList.remove('hidden');
+        } else {
+            this.editingMomentId = null;
+            document.getElementById('moment-date').value = new Date().toISOString().split('T')[0];
+            document.getElementById('moment-content').value = '';
+            document.getElementById('moment-tags-input').value = '';
+            document.getElementById('moment-char-count').textContent = '0/500';
+            deleteBtn?.classList.add('hidden');
+        }
+
+        overlay?.classList.remove('hidden');
+        document.getElementById('moment-edit-id').value = this.editingMomentId || '';
+    }
+
+    openExerciseModal(exercise) {
+        const overlay = document.getElementById('life-modal-overlay');
+        const typeSelect = document.getElementById('life-modal-type-select');
+        const momentForm = document.getElementById('life-form-moment');
+        const exerciseForm = document.getElementById('life-form-exercise');
+        const deleteBtn = document.getElementById('exercise-delete-btn');
+
+        typeSelect?.querySelectorAll('.life-modal-type-btn').forEach(b => {
+            b.classList.toggle('active', b.dataset.type === 'exercise');
+        });
+        momentForm?.classList.add('hidden');
+        exerciseForm?.classList.remove('hidden');
+
+        const title = document.getElementById('life-modal-title');
+        if (title) title.textContent = exercise ? '编辑运动' : '新增运动';
+
+        if (exercise) {
+            this.editingExerciseId = exercise._id || null;
+            document.getElementById('exercise-date').value = exercise.date || '';
+            document.getElementById('exercise-type').value = exercise.type || '';
+            document.getElementById('exercise-duration').value = exercise.duration || '';
+            document.getElementById('exercise-distance').value = exercise.distance || '';
+            document.getElementById('exercise-calories').value = exercise.calories || '';
+            document.getElementById('exercise-note').value = exercise.note || '';
+            deleteBtn?.classList.remove('hidden');
+        } else {
+            this.editingExerciseId = null;
+            document.getElementById('exercise-date').value = new Date().toISOString().split('T')[0];
+            document.getElementById('exercise-type').value = '';
+            document.getElementById('exercise-duration').value = '';
+            document.getElementById('exercise-distance').value = '';
+            document.getElementById('exercise-calories').value = '';
+            document.getElementById('exercise-note').value = '';
+            deleteBtn?.classList.add('hidden');
+        }
+
+        document.getElementById('exercise-edit-id').value = this.editingExerciseId || '';
+        overlay?.classList.remove('hidden');
+    }
+
+    handleMomentSubmit() {
+        const date = document.getElementById('moment-date').value;
+        const content = document.getElementById('moment-content').value.trim();
+        const tagsInput = document.getElementById('moment-tags-input').value.trim();
+        const tags = tagsInput ? tagsInput.split(',').map(t => t.trim()).filter(Boolean) : [];
+
+        if (!date || !content) {
+            this.showToast('请填写日期和内容', true);
+            return;
+        }
+
+        const editId = document.getElementById('moment-edit-id').value;
+        const momentData = { date, content, tags };
+
+        if (editId) {
+            // Update existing
+            const idx = this.moments.findIndex(m => (m._id || '') === editId);
+            if (idx >= 0) {
+                this.moments[idx] = { ...this.moments[idx], ...momentData };
+            }
+        } else {
+            // Add new
+            this.moments.unshift({
+                ...momentData,
+                _id: 'm_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5)
+            });
+        }
+
+        this.moments.sort((a, b) => b.date.localeCompare(a.date));
+        this._saveLocalMoments();
+        document.getElementById('life-modal-overlay')?.classList.add('hidden');
+        this.renderMomentsStats();
+        this.renderMomentsTags();
+        this.renderMoments();
+        this.showToast(editId ? '随笔已更新 ✅' : '随笔已添加 ✅');
+    }
+
+    handleMomentDelete() {
+        const editId = document.getElementById('moment-edit-id').value;
+        if (!editId) return;
+        if (!confirm('确定删除这条随笔吗？')) return;
+
+        this.moments = this.moments.filter(m => (m._id || '') !== editId);
+        this._saveLocalMoments();
+        document.getElementById('life-modal-overlay')?.classList.add('hidden');
+        this.renderAll();
+        this.showToast('随笔已删除 🗑');
+    }
+
+    handleExerciseSubmit() {
+        const date = document.getElementById('exercise-date').value;
+        const type = document.getElementById('exercise-type').value;
+        const duration = parseInt(document.getElementById('exercise-duration').value) || 0;
+        const distance = parseFloat(document.getElementById('exercise-distance').value) || 0;
+        const calories = parseInt(document.getElementById('exercise-calories').value) || 0;
+        const note = document.getElementById('exercise-note').value.trim();
+
+        if (!date || !type) {
+            this.showToast('请填写日期和运动类型', true);
+            return;
+        }
+
+        const editId = document.getElementById('exercise-edit-id').value;
+        const exerciseData = { date, type, duration, distance, calories, note };
+
+        if (editId) {
+            const idx = this.exercises.findIndex(e => (e._id || '') === editId);
+            if (idx >= 0) {
+                this.exercises[idx] = { ...this.exercises[idx], ...exerciseData };
+            }
+        } else {
+            this.exercises.unshift({
+                ...exerciseData,
+                _id: 'e_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5)
+            });
+        }
+
+        this.exercises.sort((a, b) => b.date.localeCompare(a.date));
+        this._saveLocalExercises();
+        document.getElementById('life-modal-overlay')?.classList.add('hidden');
+        this.renderAll();
+        this.showToast(editId ? '运动记录已更新 ✅' : '运动记录已添加 ✅');
+    }
+
+    handleExerciseDelete() {
+        const editId = document.getElementById('exercise-edit-id').value;
+        if (!editId) return;
+        if (!confirm('确定删除这条运动记录吗？')) return;
+
+        this.exercises = this.exercises.filter(e => (e._id || '') !== editId);
+        this._saveLocalExercises();
+        document.getElementById('life-modal-overlay')?.classList.add('hidden');
+        this.renderAll();
+        this.showToast('运动记录已删除 🗑');
+    }
+
+    // ===== Card-level delete (from list view) =====
+    deleteMomentById(id) {
+        if (!confirm('确定删除这条随笔吗？')) return;
+        this.moments = this.moments.filter(m => (m._id || '') !== id);
+        this._saveLocalMoments();
+        this.renderAll();
+        this.showToast('随笔已删除 🗑');
+    }
+
+    deleteExerciseById(id) {
+        if (!confirm('确定删除这条运动记录吗？')) return;
+        this.exercises = this.exercises.filter(e => (e._id || '') !== id);
+        this._saveLocalExercises();
+        this.renderAll();
+        this.showToast('运动记录已删除 🗑');
+    }
+
+    // ===== Local Storage =====
+    _saveLocalMoments() {
+        try {
+            localStorage.setItem('life_moments_full', JSON.stringify(this.moments));
+        } catch (e) {
+            console.warn('localStorage 存储失败:', e);
+        }
+    }
+
+    _saveLocalExercises() {
+        try {
+            localStorage.setItem('life_exercises_full', JSON.stringify({
+                exercises: this.exercises,
+                goals: this.goals
+            }));
+        } catch (e) {
+            console.warn('localStorage 存储失败:', e);
+        }
+    }
+
+    // ===== GitHub Sync =====
+    async syncToGitHub() {
+        const token = this.auth.githubToken;
+        if (!token) {
+            this.showToast('请先在登录时提供 GitHub Token', true);
+            return;
+        }
+
+        const syncBtn = document.getElementById('life-sync-btn');
+        const statusEl = document.getElementById('life-sync-status');
+
+        if (syncBtn) {
+            syncBtn.classList.add('syncing');
+            syncBtn.querySelector('span').textContent = '同步中...';
+        }
+        if (statusEl) {
+            statusEl.textContent = '⏳ 同步中...';
+            statusEl.classList.remove('hidden', 'success', 'error');
+        }
+
+        const owner = 'lishengyu';
+        const repo = 'lishengyu.github.io';
+
+        // Prepare clean data (remove _id)
+        const syncResults = [];
+
+        // Sync moments
+        try {
+            const cleanMoments = this.moments.map(({ _id, ...rest }) => rest);
+            await this._syncFile(token, owner, repo, 'js/life-data.json', JSON.stringify(cleanMoments, null, 2), '更新随笔数据');
+            syncResults.push('随笔');
+        } catch (e) {
+            syncResults.push('随笔失败: ' + e.message);
+        }
+
+        // Sync exercises
+        try {
+            const cleanExercises = {
+                exercises: this.exercises.map(({ _id, ...rest }) => rest),
+                goals: this.goals
+            };
+            await this._syncFile(token, owner, repo, 'js/exercise-data.json', JSON.stringify(cleanExercises, null, 2), '更新运动数据');
+            syncResults.push('运动记录');
+        } catch (e) {
+            syncResults.push('运动失败: ' + e.message);
+        }
+
+        // Update UI
+        if (syncBtn) {
+            syncBtn.classList.remove('syncing');
+            syncBtn.querySelector('span').textContent = '同步到仓库';
+        }
+
+        const success = syncResults.every(r => !r.includes('失败'));
+        if (statusEl) {
+            if (success && syncResults.length > 0) {
+                statusEl.textContent = '✅ 同步成功';
+                statusEl.classList.add('success');
+                // Clear local after successful sync
+                localStorage.removeItem('life_moments_full');
+                localStorage.removeItem('life_exercises_full');
+                this.showToast('已同步到 GitHub 仓库 ✅');
+            } else {
+                statusEl.textContent = '❌ ' + syncResults.join('; ');
+                statusEl.classList.add('error');
+                this.showToast('同步失败，请检查 Token 权限', true);
+            }
+            statusEl.classList.remove('hidden');
+            setTimeout(() => statusEl.classList.add('hidden'), 5000);
+        }
+    }
+
+    async _syncFile(token, owner, repo, path, content, message) {
+        const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
+        // Get current file SHA
+        const getResp = await fetch(apiUrl, {
+            headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' }
+        });
+
+        if (!getResp.ok) {
+            throw new Error(`获取 ${path} 失败: ${getResp.status}`);
+        }
+
+        const fileInfo = await getResp.json();
+        const sha = fileInfo.sha;
+
+        // Encode content to base64
+        const encoder = new TextEncoder();
+        const data = encoder.encode(content);
+        const base64 = btoa(String.fromCharCode(...new Uint8Array(data)));
+
+        // Put updated content
+        const putResp = await fetch(apiUrl, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${token}`,
+                'Accept': 'application/vnd.github.v3+json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: message,
+                content: base64,
+                sha: sha,
+                branch: 'main'
+            })
+        });
+
+        if (!putResp.ok) {
+            const errData = await putResp.json().catch(() => ({}));
+            throw new Error(errData.message || `提交 ${path} 失败: ${putResp.status}`);
         }
     }
 
@@ -977,14 +1547,18 @@ class LifeRenderer {
             return;
         }
 
+        const isLoggedIn = this.auth.isAuthenticated;
+
         container.innerHTML = moments.map((m, index) => {
             const date = new Date(m.date);
             const dateStr = date.toLocaleDateString('zh-CN', {
                 year: 'numeric', month: 'long', day: 'numeric',
                 weekday: 'short'
             });
+            const mid = m._id || '';
             return `
                 <div class="moment-card" style="animation-delay: ${index * 0.05}s; animation: fadeIn 0.4s ease-out forwards; opacity: 0;">
+                    ${isLoggedIn ? `<button class="moment-edit-btn" title="编辑" data-mid="${this.escapeAttr(mid)}" data-action="edit-moment">✏️</button>` : ''}
                     <div class="moment-header">
                         <span class="moment-dot"></span>
                         <span class="moment-date">${dateStr}</span>
@@ -996,6 +1570,18 @@ class LifeRenderer {
                 </div>
             `;
         }).join('');
+
+        // Bind edit click events
+        if (isLoggedIn) {
+            container.querySelectorAll('[data-action="edit-moment"]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const mid = btn.dataset.mid;
+                    const moment = this.moments.find(m => (m._id || '') === mid);
+                    if (moment) this.openMomentModal(moment);
+                });
+            });
+        }
     }
 
     // ===== Exercise Stats =====
@@ -1146,18 +1732,23 @@ class LifeRenderer {
             '跑步': { icon: '🏃', cls: 'run' },
             '游泳': { icon: '🏊', cls: 'swim' },
             '骑行': { icon: '🚴', cls: 'bike' },
+            '室外散步': { icon: '🚶', cls: 'bike' },
             '力量训练': { icon: '🏋️', cls: 'gym' },
             '瑜伽': { icon: '🧘', cls: 'yoga' },
             '篮球': { icon: '🏀', cls: 'ball' },
             '足球': { icon: '⚽', cls: 'ball' },
             '羽毛球': { icon: '🏸', cls: 'ball' },
-            '休息': { icon: '😴', cls: 'rest' }
+            '休息': { icon: '😴', cls: 'rest' },
+            '其他': { icon: '💪', cls: 'gym' }
         };
+
+        const isLoggedIn = this.auth.isAuthenticated;
 
         container.innerHTML = exercises.map(e => {
             const info = iconMap[e.type] || { icon: '💪', cls: 'gym' };
             const date = new Date(e.date);
             const dateStr = date.toLocaleDateString('zh-CN', { month: 'short', day: 'numeric', weekday: 'short' });
+            const eid = e._id || '';
 
             let metricsHTML = '';
             if (e.type !== '休息') {
@@ -1177,9 +1768,22 @@ class LifeRenderer {
                     </div>
                     ${metricsHTML}
                     ${e.note ? `<div class="ex-note" title="${this.escapeAttr(e.note)}">${this.escapeHtml(e.note)}</div>` : ''}
+                    ${isLoggedIn ? `<button class="exercise-edit-btn" title="编辑" data-eid="${this.escapeAttr(eid)}" data-action="edit-exercise">✏️</button>` : ''}
                 </div>
             `;
         }).join('');
+
+        // Bind edit click events
+        if (isLoggedIn) {
+            container.querySelectorAll('[data-action="edit-exercise"]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const eid = btn.dataset.eid;
+                    const exercise = this.exercises.find(ex => (ex._id || '') === eid);
+                    if (exercise) this.openExerciseModal(exercise);
+                });
+            });
+        }
     }
 
     // ===== Charts =====
@@ -1497,6 +2101,44 @@ class LifeRenderer {
     }
 
     // ===== Helpers =====
+    showToast(message, isError = false) {
+        const toast = document.getElementById('life-toast');
+        if (!toast) return;
+        toast.textContent = message;
+        toast.classList.toggle('error', isError);
+        toast.classList.remove('hidden');
+        clearTimeout(this._toastTimer);
+        this._toastTimer = setTimeout(() => {
+            toast.classList.add('hidden');
+        }, 2500);
+    }
+
+    renderTagHints() {
+        const container = document.getElementById('moment-tag-hints');
+        if (!container) return;
+        const existingTags = [...new Set(this.moments.flatMap(m => m.tags || []))];
+        if (existingTags.length === 0) {
+            container.innerHTML = '';
+            return;
+        }
+        container.innerHTML = existingTags.map(tag =>
+            `<span class="tag-hint-chip" data-tag="${this.escapeAttr(tag)}">${this.escapeHtml(tag)}</span>`
+        ).join('');
+
+        container.querySelectorAll('.tag-hint-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const input = document.getElementById('moment-tags-input');
+                if (!input) return;
+                const current = input.value.split(',').map(t => t.trim()).filter(Boolean);
+                const tag = chip.dataset.tag;
+                if (!current.includes(tag)) {
+                    current.push(tag);
+                    input.value = current.join(',');
+                }
+            });
+        });
+    }
+
     escapeHtml(str) {
         if (!str) return '';
         const div = document.createElement('div');
@@ -1527,6 +2169,7 @@ class MobileMenu {
 
 // ========== Initialize App ==========
 document.addEventListener('DOMContentLoaded', () => {
+    const authManager = new AuthManager();
     const themeManager = new ThemeManager();
     const router = new Router();
     const blogRenderer = new BlogRenderer();
@@ -1534,8 +2177,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillsRenderer = new SkillsRenderer();
     const readingRenderer = new ReadingRenderer();
     const learningRenderer = new LearningRenderer();
-    const lifeRenderer = new LifeRenderer();
+    const lifeRenderer = new LifeRenderer(authManager);
     const mobileMenu = new MobileMenu();
+
+    // Expose for auth callbacks
+    window._lifeRenderer = lifeRenderer;
 
     // Render latest posts on home page
     blogRenderer.renderLatestPosts();

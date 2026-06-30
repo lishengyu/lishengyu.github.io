@@ -305,9 +305,21 @@
         <!-- Life Page -->
         <section id="page-life" class="page-section hidden">
             <div class="max-w-4xl mx-auto px-6 py-16">
-                <div class="mb-10">
-                    <h1 class="text-4xl font-bold text-gray-900 mb-4">🌱 日常生活</h1>
-                    <p class="text-gray-600">随笔感悟 · 运动记录</p>
+                <div class="mb-10 flex items-center justify-between flex-wrap gap-4">
+                    <div>
+                        <h1 class="text-4xl font-bold text-gray-900 mb-2">🌱 日常生活</h1>
+                        <p class="text-gray-600">随笔感悟 · 运动记录</p>
+                    </div>
+                    <div class="flex items-center gap-2" id="life-auth-area">
+                        <button id="life-sync-btn" class="life-sync-btn hidden" title="同步到 GitHub 仓库">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                            </svg>
+                            <span class="ml-1 text-sm">同步到仓库</span>
+                        </button>
+                        <span id="life-sync-status" class="life-sync-status hidden"></span>
+                        <button id="life-login-btn" class="life-login-btn" title="登录以编辑记录">🔒 登录</button>
+                    </div>
                 </div>
 
                 <!-- Tab Navigation -->
@@ -404,6 +416,13 @@
                     <p class="text-gray-500 mt-4">加载中...</p>
                 </div>
             </div>
+
+            <!-- Floating Add Button -->
+            <button id="life-add-btn" class="life-fab hidden" title="新增记录" aria-label="新增记录">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                </svg>
+            </button>
         </section>
         <section id="page-about" class="page-section hidden">
             <div class="max-w-4xl mx-auto px-6 py-16">
@@ -452,6 +471,125 @@
             <p>&copy; 2024 My Personal Website. Built with ❤️ using GitHub Pages.</p>
         </div>
     </footer>
+
+    <!-- Life Module - Add Entry Modal -->
+    <div id="life-modal-overlay" class="life-modal-overlay hidden">
+        <div class="life-modal" role="dialog" aria-modal="true">
+            <div class="life-modal-header">
+                <h2 id="life-modal-title" class="life-modal-title">新增记录</h2>
+                <button id="life-modal-close" class="life-modal-close" aria-label="关闭">&times;</button>
+            </div>
+            <div class="life-modal-body">
+                <!-- Type Selector (only when both tabs have data) -->
+                <div class="life-modal-type-select" id="life-modal-type-select">
+                    <button class="life-modal-type-btn active" data-type="moment">✍️ 随笔感悟</button>
+                    <button class="life-modal-type-btn" data-type="exercise">🏃 运动记录</button>
+                </div>
+
+                <!-- Moment Form -->
+                <form id="life-form-moment" class="life-form">
+                    <input type="hidden" id="moment-edit-id" value="">
+                    <div class="life-form-group">
+                        <label class="life-form-label" for="moment-date">日期</label>
+                        <input type="date" id="moment-date" class="life-form-input" required>
+                    </div>
+                    <div class="life-form-group">
+                        <label class="life-form-label" for="moment-content">内容 <span class="life-form-hint">(支持简短文字)</span></label>
+                        <textarea id="moment-content" class="life-form-input life-form-textarea" rows="4" placeholder="今天发生了什么？有什么感悟？" required maxlength="500"></textarea>
+                        <span class="life-form-char-count" id="moment-char-count">0/500</span>
+                    </div>
+                    <div class="life-form-group">
+                        <label class="life-form-label" for="moment-tags-input">标签 <span class="life-form-hint">(逗号分隔，如：daily,life,code)</span></label>
+                        <input type="text" id="moment-tags-input" class="life-form-input" placeholder="daily,life" maxlength="100">
+                        <div class="life-form-tag-hints" id="moment-tag-hints"></div>
+                    </div>
+                    <div class="life-form-actions">
+                        <button type="button" id="moment-delete-btn" class="life-form-delete hidden">🗑 删除</button>
+                        <button type="submit" class="life-form-submit">✅ 保存随笔</button>
+                    </div>
+                </form>
+
+                <!-- Exercise Form -->
+                <form id="life-form-exercise" class="life-form hidden">
+                    <input type="hidden" id="exercise-edit-id" value="">
+                    <div class="life-form-group">
+                        <label class="life-form-label" for="exercise-date">日期</label>
+                        <input type="date" id="exercise-date" class="life-form-input" required>
+                    </div>
+                    <div class="life-form-group">
+                        <label class="life-form-label" for="exercise-type">运动类型</label>
+                        <select id="exercise-type" class="life-form-input" required>
+                            <option value="" disabled selected>请选择...</option>
+                            <option value="跑步">🏃 跑步</option>
+                            <option value="游泳">🏊 游泳</option>
+                            <option value="骑行">🚴 骑行</option>
+                            <option value="室外散步">🚶 室外散步</option>
+                            <option value="力量训练">🏋️ 力量训练</option>
+                            <option value="瑜伽">🧘 瑜伽</option>
+                            <option value="篮球">🏀 篮球</option>
+                            <option value="足球">⚽ 足球</option>
+                            <option value="羽毛球">🏸 羽毛球</option>
+                            <option value="休息">😴 休息</option>
+                            <option value="其他">💪 其他</option>
+                        </select>
+                    </div>
+                    <div class="life-form-row">
+                        <div class="life-form-group">
+                            <label class="life-form-label" for="exercise-duration">时长 (分钟)</label>
+                            <input type="number" id="exercise-duration" class="life-form-input" placeholder="30" min="0" max="600" step="5">
+                        </div>
+                        <div class="life-form-group">
+                            <label class="life-form-label" for="exercise-distance">距离 (公里)</label>
+                            <input type="number" id="exercise-distance" class="life-form-input" placeholder="5.0" min="0" max="100" step="0.1">
+                        </div>
+                    </div>
+                    <div class="life-form-group">
+                        <label class="life-form-label" for="exercise-calories">消耗热量 (千卡)</label>
+                        <input type="number" id="exercise-calories" class="life-form-input" placeholder="300" min="0" max="5000">
+                    </div>
+                    <div class="life-form-group">
+                        <label class="life-form-label" for="exercise-note">备注 <span class="life-form-hint">(可选)</span></label>
+                        <input type="text" id="exercise-note" class="life-form-input" placeholder="配速、感受等" maxlength="100">
+                    </div>
+                    <div class="life-form-actions">
+                        <button type="button" id="exercise-delete-btn" class="life-form-delete hidden">🗑 删除</button>
+                        <button type="submit" class="life-form-submit">✅ 保存运动</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="life-login-modal-overlay" class="life-modal-overlay hidden">
+        <div class="life-modal life-login-modal" role="dialog" aria-modal="true">
+            <div class="life-modal-header">
+                <h2 class="life-modal-title">🔐 身份验证</h2>
+                <button id="life-login-modal-close" class="life-modal-close" aria-label="关闭">&times;</button>
+            </div>
+            <div class="life-modal-body">
+                <p class="life-login-hint">请输入密码以解锁编辑功能。只需要登录一次，关闭浏览器后自动退出。</p>
+                <form id="life-login-form" class="life-form">
+                    <div class="life-form-group">
+                        <label class="life-form-label" for="login-password">密码</label>
+                        <input type="password" id="login-password" class="life-form-input" placeholder="请输入密码" required autocomplete="current-password">
+                    </div>
+                    <div class="life-form-group">
+                        <label class="life-form-label" for="login-token">
+                            GitHub Personal Access Token
+                            <span class="life-form-hint">(<a href="https://github.com/settings/tokens/new?scopes=repo&description=LifeTracker" target="_blank" class="text-green-600 underline">点击创建 Token</a>，需要勾选 repo 权限。不填则仅本地存储)</span>
+                        </label>
+                        <input type="password" id="login-token" class="life-form-input" placeholder="ghp_xxxxxxxxxxxx (可选)" autocomplete="off">
+                    </div>
+                    <div class="life-login-error hidden" id="life-login-error"></div>
+                    <button type="submit" class="life-form-submit">✅ 验证并登录</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="life-toast" class="life-toast hidden"></div>
 
     <!-- Scripts -->
     <script src="js/data.js"></script>
