@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Marked.js for Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +29,7 @@
                 <a href="#projects" class="nav-link text-gray-600 hover:text-gray-900 transition-colors">项目</a>
                 <a href="#reading" class="nav-link text-gray-600 hover:text-gray-900 transition-colors">阅读</a>
                 <a href="#learning" class="nav-link text-gray-600 hover:text-gray-900 transition-colors">学习</a>
+                <a href="#life" class="nav-link text-gray-600 hover:text-gray-900 transition-colors">生活</a>
                 <a href="#about" class="nav-link text-gray-600 hover:text-gray-900 transition-colors">关于</a>
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 transition-colors" aria-label="切换主题">
                     <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
@@ -46,6 +49,7 @@
                 <a href="#projects" class="block nav-link text-gray-600 hover:text-gray-900 py-2">项目</a>
                 <a href="#reading" class="block nav-link text-gray-600 hover:text-gray-900 py-2">阅读</a>
                 <a href="#learning" class="block nav-link text-gray-600 hover:text-gray-900 py-2">学习</a>
+                <a href="#life" class="block nav-link text-gray-600 hover:text-gray-900 py-2">生活</a>
                 <a href="#about" class="block nav-link text-gray-600 hover:text-gray-900 py-2">关于</a>
             </div>
         </div>
@@ -107,6 +111,13 @@
                         </div>
                         <h3 class="text-lg font-semibold text-gray-900 mb-2">学习计划</h3>
                         <p class="text-gray-600 text-sm">结构化学习路线追踪</p>
+                    </a>
+                    <a href="#life" class="nav-link group bg-white p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-100 transition-colors">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">日常生活</h3>
+                        <p class="text-gray-600 text-sm">随笔感悟与运动记录</p>
                     </a>
                     <a href="#about" class="nav-link group bg-white p-8 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                         <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-100 transition-colors">
@@ -291,7 +302,109 @@
             </div>
         </section>
 
-        <!-- About Page -->
+        <!-- Life Page -->
+        <section id="page-life" class="page-section hidden">
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <div class="mb-10">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">🌱 日常生活</h1>
+                    <p class="text-gray-600">随笔感悟 · 运动记录</p>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="flex gap-4 mb-10" id="life-tabs">
+                    <button class="life-tab active px-6 py-3 rounded-xl text-sm font-semibold transition-all" data-tab="moments">
+                        ✍️ 随笔感悟
+                    </button>
+                    <button class="life-tab px-6 py-3 rounded-xl text-sm font-semibold transition-all" data-tab="exercise">
+                        🏃 运动记录
+                    </button>
+                </div>
+
+                <!-- ===== 随笔 Tab Content ===== -->
+                <div id="life-panel-moments">
+                    <!-- Moments Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8" id="moments-stats">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <!-- Tag filter -->
+                    <div class="flex flex-wrap gap-2 mb-8" id="moments-tags">
+                        <button class="tag-btn active px-4 py-2 rounded-full text-sm font-medium transition-all" data-tag="all">全部</button>
+                    </div>
+
+                    <!-- Moments Timeline -->
+                    <div class="space-y-4" id="moments-list">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div id="moments-empty" class="hidden text-center py-16">
+                        <div class="text-6xl mb-4">✍️</div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">暂无随笔</h3>
+                        <p class="text-gray-500">在 js/life-data.json 中添加记录即可</p>
+                    </div>
+                </div>
+
+                <!-- ===== 运动 Tab Content ===== -->
+                <div id="life-panel-exercise" class="hidden">
+                    <!-- Exercise Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8" id="exercise-stats">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <!-- Goal Progress -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8" id="exercise-goals">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <!-- Chart Controls -->
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                        <h2 class="text-xl font-bold text-gray-900">📊 运动数据可视化</h2>
+                        <div class="flex items-center gap-1" id="chart-format">
+                            <span class="text-xs text-gray-400 mr-1">图表:</span>
+                            <button class="sort-btn active px-3 py-1.5 rounded-full text-xs font-medium transition-all" data-format="line">折线图</button>
+                            <button class="sort-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all" data-format="bar">柱状图</button>
+                            <button class="sort-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all" data-format="radar">雷达图</button>
+                            <button class="sort-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all" data-format="calendar">日历热力</button>
+                        </div>
+                    </div>
+
+                    <!-- Chart Canvas -->
+                    <div class="chart-container mb-6" id="chart-wrapper">
+                        <canvas id="exercise-chart"></canvas>
+                    </div>
+
+                    <!-- Calendar Heatmap (shown when calendar format selected) -->
+                    <div class="calendar-heatmap hidden mb-6" id="calendar-heatmap">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <!-- Exercise Filter -->
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                        <div class="flex flex-wrap gap-2" id="exercise-filter-tags">
+                            <button class="tag-btn active px-4 py-2 rounded-full text-sm font-medium transition-all" data-type="all">全部</button>
+                        </div>
+                        <span class="text-xs text-gray-400" id="exercise-count"></span>
+                    </div>
+
+                    <!-- Exercise List -->
+                    <div class="space-y-3" id="exercise-list">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div id="exercise-empty" class="hidden text-center py-16">
+                        <div class="text-6xl mb-4">🏃</div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">暂无运动记录</h3>
+                        <p class="text-gray-500">在 js/exercise-data.json 中添加记录即可</p>
+                    </div>
+                </div>
+
+                <!-- Loading -->
+                <div id="life-loading" class="text-center py-16">
+                    <div class="inline-block w-8 h-8 border-4 border-green-200 border-t-green-600 rounded-full animate-spin"></div>
+                    <p class="text-gray-500 mt-4">加载中...</p>
+                </div>
+            </div>
+        </section>
         <section id="page-about" class="page-section hidden">
             <div class="max-w-4xl mx-auto px-6 py-16">
                 <div class="mb-12">

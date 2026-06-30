@@ -970,6 +970,350 @@ button {
     margin-top: 4px;
 }
 
+/* ============================================
+   Life Module Styles
+   ============================================ */
+
+/* ---- Life Tabs ---- */
+.life-tab {
+    background: var(--color-surface);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+}
+
+.life-tab:hover {
+    color: #16a34a;
+    border-color: #86efac;
+}
+
+.life-tab.active {
+    background: #16a34a;
+    color: white;
+    border-color: #16a34a;
+    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+}
+
+/* ---- Moments Card (Timeline) ---- */
+.moment-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    transition: all var(--transition);
+    position: relative;
+    border-left: 3px solid #16a34a;
+}
+
+.moment-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.moment-card .moment-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.moment-card .moment-date {
+    font-size: 0.8rem;
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.moment-card .moment-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #16a34a;
+    flex-shrink: 0;
+}
+
+.moment-card .moment-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+.moment-card .moment-tag {
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    background: rgba(22, 163, 74, 0.08);
+    color: #16a34a;
+}
+
+[data-theme="dark"] .moment-card .moment-tag {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+}
+
+.moment-card .moment-content {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    line-height: 1.8;
+}
+
+/* ---- Exercise Card ---- */
+.exercise-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.exercise-card:hover {
+    border-color: #16a34a;
+    box-shadow: var(--shadow-sm);
+}
+
+.exercise-card .ex-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.ex-icon.run { background: rgba(22, 163, 74, 0.1); }
+.ex-icon.swim { background: rgba(14, 165, 233, 0.1); }
+.ex-icon.bike { background: rgba(245, 158, 11, 0.1); }
+.ex-icon.gym { background: rgba(239, 68, 68, 0.1); }
+.ex-icon.yoga { background: rgba(168, 85, 247, 0.1); }
+.ex-icon.ball { background: rgba(236, 72, 153, 0.1); }
+.ex-icon.rest { background: rgba(148, 163, 184, 0.1); }
+
+.exercise-card .ex-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.exercise-card .ex-type {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.exercise-card .ex-date {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+}
+
+.exercise-card .ex-metrics {
+    display: flex;
+    gap: 16px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.exercise-card .ex-metric {
+    display: flex;
+    flex-direction: column;
+}
+
+.exercise-card .ex-metric .ex-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.exercise-card .ex-metric .ex-label {
+    font-size: 0.65rem;
+    color: var(--color-text-secondary);
+}
+
+.exercise-card .ex-note {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    flex-shrink: 0;
+    max-width: 120px;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ---- Goal Progress Card ---- */
+.goal-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    transition: all var(--transition);
+}
+
+.goal-card:hover {
+    border-color: #16a34a;
+    box-shadow: var(--shadow-sm);
+}
+
+.goal-card .goal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.goal-card .goal-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.goal-card .goal-meta {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+.goal-card .goal-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--color-border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.goal-card .goal-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.8s ease;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.goal-card .goal-fill.warning {
+    background: linear-gradient(90deg, #f59e0b, #eab308);
+}
+
+.goal-card .goal-fill.danger {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+/* ---- Chart Container ---- */
+.chart-container {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    position: relative;
+    min-height: 320px;
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    max-height: 400px;
+}
+
+/* ---- Calendar Heatmap ---- */
+.calendar-heatmap {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    overflow-x: auto;
+}
+
+.calendar-heatmap .cal-weekdays {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 4px;
+    padding-left: 28px;
+}
+
+.calendar-heatmap .cal-weekdays span {
+    width: 28px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+}
+
+.calendar-heatmap .cal-body {
+    display: flex;
+    gap: 4px;
+}
+
+.calendar-heatmap .cal-month-label {
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+    width: 24px;
+    flex-shrink: 0;
+    text-align: right;
+    padding-top: 4px;
+    line-height: 1.3;
+}
+
+.calendar-heatmap .cal-month-col {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.calendar-heatmap .cal-cell {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    transition: all var(--transition);
+    cursor: default;
+    position: relative;
+}
+
+.calendar-heatmap .cal-cell:hover {
+    transform: scale(1.2);
+    box-shadow: var(--shadow-sm);
+    z-index: 1;
+}
+
+.calendar-heatmap .cal-cell.l0 { background: var(--color-border); }
+.calendar-heatmap .cal-cell.l1 { background: #bbf7d0; }
+.calendar-heatmap .cal-cell.l2 { background: #4ade80; }
+.calendar-heatmap .cal-cell.l3 { background: #16a34a; }
+.calendar-heatmap .cal-cell.l4 { background: #15803d; }
+
+[data-theme="dark"] .calendar-heatmap .cal-cell.l1 { background: #14532d; }
+[data-theme="dark"] .calendar-heatmap .cal-cell.l2 { background: #166534; }
+[data-theme="dark"] .calendar-heatmap .cal-cell.l3 { background: #16a34a; }
+[data-theme="dark"] .calendar-heatmap .cal-cell.l4 { background: #22c55e; }
+
+/* ---- Life Module Stat Card Colors ---- */
+.stat-card-green::before { background: #16a34a; }
+
+/* ---- Responsive for Life Module ---- */
+@media (max-width: 768px) {
+    .exercise-card {
+        flex-wrap: wrap;
+    }
+    .exercise-card .ex-metrics {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 8px;
+    }
+    .exercise-card .ex-note {
+        width: 100%;
+        text-align: left;
+        max-width: 100%;
+    }
+    .calendar-heatmap {
+        padding: 12px;
+    }
+    .calendar-heatmap .cal-cell {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 /* Sync info */
 .sync-info {
     font-size: 0.8rem;

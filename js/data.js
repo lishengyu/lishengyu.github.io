@@ -40,3 +40,7 @@ const wereadDataUrl = 'js/weread-data.json';
 
 // ========== Learning Plan Index Source ==========
 const learningIndexUrl = 'learning/index.json';
+
+// ========== Life Module Data Source ==========
+const lifeDataUrl = 'js/life-data.json';
+const exerciseDataUrl = 'js/exercise-data.json';

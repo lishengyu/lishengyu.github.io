@@ -58,6 +58,7 @@ class Router {
             projects: '项目展示',
             reading: '微信读书',
             learning: '学习计划',
+            life: '日常生活',
             about: '关于我'
         };
         document.title = `${titles[page] || 'My Personal Website'} | My Personal Website`;
@@ -816,6 +817,699 @@ class LearningRenderer {
         return div.innerHTML;
     }
 }
+// ========== Life Renderer ==========
+class LifeRenderer {
+    constructor() {
+        this.moments = [];
+        this.exercises = [];
+        this.goals = {};
+        this.currentTab = 'moments';
+        this.momentTag = 'all';
+        this.exerciseType = 'all';
+        this.chartFormat = 'line';
+        this.chartInstance = null;
+        this.init();
+    }
+
+    async init() {
+        await Promise.all([this.loadMoments(), this.loadExercises()]);
+        this.setupTabs();
+        this.renderMomentsStats();
+        this.renderMomentsTags();
+        this.renderMoments();
+        this.renderExerciseStats();
+        this.renderExerciseGoals();
+        this.renderExerciseFilterTags();
+        this.renderExerciseList();
+        this.setupChartFormat();
+        this.renderChart();
+        this.hideLoading();
+    }
+
+    async loadMoments() {
+        try {
+            const response = await fetch(lifeDataUrl + '?t=' + Date.now());
+            if (!response.ok) throw new Error('Moments data not found');
+            this.moments = await response.json();
+            // Sort by date descending
+            this.moments.sort((a, b) => b.date.localeCompare(a.date));
+        } catch (e) {
+            console.warn('随笔数据加载失败:', e.message);
+            this.moments = [];
+        }
+    }
+
+    async loadExercises() {
+        try {
+            const response = await fetch(exerciseDataUrl + '?t=' + Date.now());
+            if (!response.ok) throw new Error('Exercise data not found');
+            const data = await response.json();
+            this.exercises = data.exercises || [];
+            this.goals = data.goals || {};
+            // Sort by date descending
+            this.exercises.sort((a, b) => b.date.localeCompare(a.date));
+        } catch (e) {
+            console.warn('运动数据加载失败:', e.message);
+            this.exercises = [];
+            this.goals = {};
+        }
+    }
+
+    hideLoading() {
+        const loading = document.getElementById('life-loading');
+        if (loading) loading.classList.add('hidden');
+
+        if (this.moments.length === 0) {
+            document.getElementById('moments-empty')?.classList.remove('hidden');
+        }
+        if (this.exercises.length === 0) {
+            document.getElementById('exercise-empty')?.classList.remove('hidden');
+        }
+    }
+
+    // ===== Tabs =====
+    setupTabs() {
+        document.getElementById('life-tabs')?.addEventListener('click', (e) => {
+            const btn = e.target.closest('.life-tab');
+            if (!btn) return;
+
+            document.querySelectorAll('.life-tab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            this.currentTab = btn.dataset.tab;
+
+            // Show/hide panels
+            document.getElementById('life-panel-moments').classList.toggle('hidden', this.currentTab !== 'moments');
+            document.getElementById('life-panel-exercise').classList.toggle('hidden', this.currentTab !== 'exercise');
+
+            // Re-render chart if switching to exercise tab (handles resize)
+            if (this.currentTab === 'exercise') {
+                setTimeout(() => this.renderChart(), 100);
+            }
+        });
+    }
+
+    // ===== Moments =====
+    renderMomentsStats() {
+        const container = document.getElementById('moments-stats');
+        if (!container) return;
+
+        const total = this.moments.length;
+        const allTags = [...new Set(this.moments.flatMap(m => m.tags || []))];
+        const thisMonth = this.moments.filter(m => {
+            const d = new Date(m.date);
+            const now = new Date();
+            return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+        }).length;
+
+        const stats = [
+            { value: total, label: '全部随笔', icon: '📝', color: 'green' },
+            { value: thisMonth, label: '本月记录', icon: '📅', color: 'emerald' },
+            { value: allTags.length, label: '话题标签', icon: '🏷️', color: 'cyan' },
+            { value: this.moments.filter(m => (m.tags || []).includes('code')).length, label: '技术随笔', icon: '💻', color: 'indigo' },
+        ];
+
+        container.innerHTML = stats.map(stat => `
+            <div class="stat-card stat-card-${stat.color}">
+                <div class="stat-icon">${stat.icon}</div>
+                <div class="stat-value">${stat.value}</div>
+                <div class="stat-label">${stat.label}</div>
+            </div>
+        `).join('');
+    }
+
+    renderMomentsTags() {
+        const container = document.getElementById('moments-tags');
+        if (!container) return;
+
+        const allTags = [...new Set(this.moments.flatMap(m => m.tags || []))];
+        if (allTags.length === 0) return;
+
+        allTags.forEach(tag => {
+            const btn = document.createElement('button');
+            btn.className = 'tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all';
+            btn.dataset.tag = tag;
+            btn.textContent = tag;
+            container.appendChild(btn);
+        });
+
+        container.addEventListener('click', (e) => {
+            const btn = e.target.closest('.tag-btn');
+            if (!btn) return;
+            document.querySelectorAll('#moments-tags .tag-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            this.momentTag = btn.dataset.tag;
+            this.renderMoments();
+        });
+    }
+
+    getFilteredMoments() {
+        if (this.momentTag === 'all') return this.moments;
+        return this.moments.filter(m => (m.tags || []).includes(this.momentTag));
+    }
+
+    renderMoments() {
+        const container = document.getElementById('moments-list');
+        if (!container) return;
+
+        const moments = this.getFilteredMoments();
+        if (moments.length === 0) {
+            container.innerHTML = '<p class="text-center text-gray-500 py-8">暂无匹配的随笔</p>';
+            return;
+        }
+
+        container.innerHTML = moments.map((m, index) => {
+            const date = new Date(m.date);
+            const dateStr = date.toLocaleDateString('zh-CN', {
+                year: 'numeric', month: 'long', day: 'numeric',
+                weekday: 'short'
+            });
+            return `
+                <div class="moment-card" style="animation-delay: ${index * 0.05}s; animation: fadeIn 0.4s ease-out forwards; opacity: 0;">
+                    <div class="moment-header">
+                        <span class="moment-dot"></span>
+                        <span class="moment-date">${dateStr}</span>
+                        <div class="moment-tags">
+                            ${(m.tags || []).map(tag => `<span class="moment-tag">${this.escapeHtml(tag)}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="moment-content">${this.escapeHtml(m.content)}</div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // ===== Exercise Stats =====
+    renderExerciseStats() {
+        const container = document.getElementById('exercise-stats');
+        if (!container || this.exercises.length === 0) return;
+
+        const activeEx = this.exercises.filter(e => e.type !== '休息');
+        const totalDuration = activeEx.reduce((s, e) => s + (e.duration || 0), 0);
+        const totalDistance = activeEx.reduce((s, e) => s + (e.distance || 0), 0);
+        const totalCalories = activeEx.reduce((s, e) => s + (e.calories || 0), 0);
+        const activeDays = activeEx.length;
+
+        const stats = [
+            { value: activeDays, label: '运动天数', icon: '📆', color: 'green' },
+            { value: (totalDuration / 60).toFixed(1), label: '总时长(h)', icon: '⏱️', color: 'cyan' },
+            { value: totalDistance.toFixed(1), label: '总距离(km)', icon: '📍', color: 'emerald' },
+            { value: totalCalories, label: '总消耗(kcal)', icon: '🔥', color: 'amber' },
+        ];
+
+        container.innerHTML = stats.map(stat => `
+            <div class="stat-card stat-card-${stat.color}">
+                <div class="stat-icon">${stat.icon}</div>
+                <div class="stat-value">${stat.value}</div>
+                <div class="stat-label">${stat.label}</div>
+            </div>
+        `).join('');
+    }
+
+    // ===== Goal Progress =====
+    renderExerciseGoals() {
+        const container = document.getElementById('exercise-goals');
+        if (!container || !this.goals) return;
+
+        const now = new Date();
+        const thisWeek = this.getWeekExercises();
+        const thisMonthEx = this.exercises.filter(e => {
+            const d = new Date(e.date);
+            return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear() && e.type !== '休息';
+        });
+
+        // Calculate weekly runs
+        const weeklyRuns = thisWeek.filter(e => e.type === '跑步').length;
+        const weeklyExerciseDays = thisWeek.length;
+
+        // Calculate monthly distance
+        const monthlyDistance = thisMonthEx.reduce((s, e) => s + (e.distance || 0), 0);
+
+        const goalItems = [
+            {
+                title: this.goals.weeklyRun?.label || '每周跑步',
+                current: weeklyRuns,
+                target: this.goals.weeklyRun?.target || 3,
+                unit: this.goals.weeklyRun?.unit || '次'
+            },
+            {
+                title: this.goals.weeklyExercise?.label || '每周运动',
+                current: weeklyExerciseDays,
+                target: this.goals.weeklyExercise?.target || 5,
+                unit: this.goals.weeklyExercise?.unit || '天'
+            },
+            {
+                title: this.goals.monthlyDistance?.label || '月跑量',
+                current: monthlyDistance.toFixed(1),
+                target: this.goals.monthlyDistance?.target || 40,
+                unit: this.goals.monthlyDistance?.unit || '公里'
+            }
+        ];
+
+        container.innerHTML = goalItems.map(g => {
+            const pct = Math.min(100, Math.round((parseFloat(g.current) / g.target) * 100));
+            let fillClass = '';
+            if (pct >= 100) fillClass = '';
+            else if (pct >= 60) fillClass = 'warning';
+            else fillClass = 'danger';
+
+            return `
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <span class="goal-title">${g.title}</span>
+                        <span class="goal-meta">${g.current}/${g.target} ${g.unit} (${pct}%)</span>
+                    </div>
+                    <div class="goal-bar">
+                        <div class="goal-fill ${fillClass}" style="width: ${pct}%"></div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    getWeekExercises() {
+        const now = new Date();
+        const dayOfWeek = now.getDay(); // 0=Sun
+        const mondayOffset = dayOfWeek === 0 ? -6 : 1 - dayOfWeek;
+        const monday = new Date(now);
+        monday.setDate(now.getDate() + mondayOffset);
+        monday.setHours(0, 0, 0, 0);
+
+        return this.exercises.filter(e => {
+            const d = new Date(e.date);
+            return d >= monday && e.type !== '休息';
+        });
+    }
+
+    // ===== Exercise Type Filter =====
+    renderExerciseFilterTags() {
+        const container = document.getElementById('exercise-filter-tags');
+        if (!container) return;
+
+        const types = [...new Set(this.exercises.map(e => e.type).filter(Boolean))];
+        types.forEach(type => {
+            const btn = document.createElement('button');
+            btn.className = 'tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all';
+            btn.dataset.type = type;
+            btn.textContent = type;
+            container.appendChild(btn);
+        });
+
+        container.addEventListener('click', (e) => {
+            const btn = e.target.closest('.tag-btn');
+            if (!btn) return;
+            document.querySelectorAll('#exercise-filter-tags .tag-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            this.exerciseType = btn.dataset.type;
+            this.renderExerciseList();
+        });
+    }
+
+    getFilteredExercises() {
+        if (this.exerciseType === 'all') return this.exercises;
+        return this.exercises.filter(e => e.type === this.exerciseType);
+    }
+
+    renderExerciseList() {
+        const container = document.getElementById('exercise-list');
+        const countEl = document.getElementById('exercise-count');
+        if (!container) return;
+
+        const exercises = this.getFilteredExercises();
+        if (countEl) countEl.textContent = `共 ${exercises.length} 条记录`;
+
+        if (exercises.length === 0) {
+            container.innerHTML = '<p class="text-center text-gray-500 py-8">暂无匹配的运动记录</p>';
+            return;
+        }
+
+        const iconMap = {
+            '跑步': { icon: '🏃', cls: 'run' },
+            '游泳': { icon: '🏊', cls: 'swim' },
+            '骑行': { icon: '🚴', cls: 'bike' },
+            '力量训练': { icon: '🏋️', cls: 'gym' },
+            '瑜伽': { icon: '🧘', cls: 'yoga' },
+            '篮球': { icon: '🏀', cls: 'ball' },
+            '足球': { icon: '⚽', cls: 'ball' },
+            '羽毛球': { icon: '🏸', cls: 'ball' },
+            '休息': { icon: '😴', cls: 'rest' }
+        };
+
+        container.innerHTML = exercises.map(e => {
+            const info = iconMap[e.type] || { icon: '💪', cls: 'gym' };
+            const date = new Date(e.date);
+            const dateStr = date.toLocaleDateString('zh-CN', { month: 'short', day: 'numeric', weekday: 'short' });
+
+            let metricsHTML = '';
+            if (e.type !== '休息') {
+                const metricItems = [];
+                if (e.duration) metricItems.push(`<div class="ex-metric"><span class="ex-value">${e.duration}</span><span class="ex-label">分钟</span></div>`);
+                if (e.distance) metricItems.push(`<div class="ex-metric"><span class="ex-value">${e.distance}</span><span class="ex-label">公里</span></div>`);
+                if (e.calories) metricItems.push(`<div class="ex-metric"><span class="ex-value">${e.calories}</span><span class="ex-label">千卡</span></div>`);
+                metricsHTML = `<div class="ex-metrics">${metricItems.join('')}</div>`;
+            }
+
+            return `
+                <div class="exercise-card">
+                    <div class="ex-icon ${info.cls}">${info.icon}</div>
+                    <div class="ex-info">
+                        <div class="ex-type">${this.escapeHtml(e.type)}</div>
+                        <div class="ex-date">${dateStr}</div>
+                    </div>
+                    ${metricsHTML}
+                    ${e.note ? `<div class="ex-note" title="${this.escapeAttr(e.note)}">${this.escapeHtml(e.note)}</div>` : ''}
+                </div>
+            `;
+        }).join('');
+    }
+
+    // ===== Charts =====
+    setupChartFormat() {
+        document.getElementById('chart-format')?.addEventListener('click', (e) => {
+            const btn = e.target.closest('.sort-btn');
+            if (!btn) return;
+            document.querySelectorAll('#chart-format .sort-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            this.chartFormat = btn.dataset.format;
+
+            // Toggle canvas vs calendar visibility
+            const chartWrapper = document.getElementById('chart-wrapper');
+            const calendarHeatmap = document.getElementById('calendar-heatmap');
+            if (this.chartFormat === 'calendar') {
+                chartWrapper.classList.add('hidden');
+                calendarHeatmap.classList.remove('hidden');
+                this.renderCalendarHeatmap();
+            } else {
+                chartWrapper.classList.remove('hidden');
+                calendarHeatmap.classList.add('hidden');
+                this.renderChart();
+            }
+        });
+    }
+
+    renderChart() {
+        if (this.currentTab !== 'exercise' || this.chartFormat === 'calendar') return;
+        if (typeof Chart === 'undefined') {
+            console.warn('Chart.js not loaded');
+            return;
+        }
+
+        // Destroy previous chart instance
+        if (this.chartInstance) {
+            this.chartInstance.destroy();
+            this.chartInstance = null;
+        }
+
+        const canvas = document.getElementById('exercise-chart');
+        if (!canvas) return;
+
+        // Get last 14 days of active exercise data (reversed for chronological order)
+        const activeExercises = this.exercises
+            .filter(e => e.type !== '休息')
+            .slice(0, 14)
+            .reverse();
+
+        if (activeExercises.length === 0) return;
+
+        const labels = activeExercises.map(e => {
+            const d = new Date(e.date);
+            return d.toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' });
+        });
+
+        const typeColors = {
+            '跑步': '#16a34a', '游泳': '#0ea5e9', '骑行': '#f59e0b',
+            '力量训练': '#ef4444', '瑜伽': '#a855f7', '篮球': '#ec4899',
+            '足球': '#84cc16', '羽毛球': '#14b8a6'
+        };
+
+        const getColor = (type) => typeColors[type] || '#6b7280';
+
+        const ctx = canvas.getContext('2d');
+
+        const chartConfigs = {
+            line: () => ({
+                type: 'line',
+                data: {
+                    labels,
+                    datasets: [
+                        {
+                            label: '运动时长(分钟)',
+                            data: activeExercises.map(e => e.duration),
+                            borderColor: '#16a34a',
+                            backgroundColor: 'rgba(22, 163, 74, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            yAxisID: 'y',
+                        },
+                        {
+                            label: '消耗卡路里(kcal)',
+                            data: activeExercises.map(e => e.calories),
+                            borderColor: '#f59e0b',
+                            backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            yAxisID: 'y1',
+                        }
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: { position: 'top' },
+                        tooltip: {
+                            callbacks: {
+                                afterBody: (ctx) => {
+                                    const ex = activeExercises[ctx[0].dataIndex];
+                                    const lines = [];
+                                    if (ex.distance) lines.push(`距离: ${ex.distance} km`);
+                                    if (ex.note) lines.push(`备注: ${ex.note}`);
+                                    return lines;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: { type: 'linear', position: 'left', title: { display: true, text: '分钟' }, beginAtZero: true },
+                        y1: { type: 'linear', position: 'right', title: { display: true, text: 'kcal' }, grid: { drawOnChartArea: false }, beginAtZero: true }
+                    }
+                }
+            }),
+
+            bar: () => ({
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [
+                        {
+                            label: '运动时长(分钟)',
+                            data: activeExercises.map(e => e.duration),
+                            backgroundColor: activeExercises.map(e => getColor(e.type)),
+                            borderRadius: 6,
+                        }
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => {
+                                    const ex = activeExercises[ctx.dataIndex];
+                                    return [`${ex.type}: ${ex.duration}分钟`, ex.distance ? `距离: ${ex.distance}km` : '', `消耗: ${ex.calories}kcal`].filter(Boolean);
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, title: { display: true, text: '分钟' } }
+                    }
+                }
+            }),
+
+            radar: () => {
+                // Aggregate by type for the last 30 days
+                const last30 = this.exercises.filter(e => {
+                    const d = new Date(e.date);
+                    return (new Date() - d) / 86400000 <= 30 && e.type !== '休息';
+                });
+
+                const typeAgg = {};
+                last30.forEach(e => {
+                    if (!typeAgg[e.type]) typeAgg[e.type] = { count: 0, duration: 0, calories: 0 };
+                    typeAgg[e.type].count++;
+                    typeAgg[e.type].duration += e.duration || 0;
+                    typeAgg[e.type].calories += e.calories || 0;
+                });
+
+                const types = Object.keys(typeAgg);
+                return {
+                    type: 'radar',
+                    data: {
+                        labels: types,
+                        datasets: [
+                            {
+                                label: '运动次数',
+                                data: types.map(t => typeAgg[t].count),
+                                borderColor: '#16a34a',
+                                backgroundColor: 'rgba(22, 163, 74, 0.2)',
+                            },
+                            {
+                                label: '总时长(h)',
+                                data: types.map(t => +(typeAgg[t].duration / 60).toFixed(1)),
+                                borderColor: '#0ea5e9',
+                                backgroundColor: 'rgba(14, 165, 233, 0.2)',
+                            },
+                            {
+                                label: '总消耗(×100kcal)',
+                                data: types.map(t => Math.round(typeAgg[t].calories / 100)),
+                                borderColor: '#f59e0b',
+                                backgroundColor: 'rgba(245, 158, 11, 0.2)',
+                            }
+                        ],
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { position: 'top' } },
+                        scales: {
+                            r: { beginAtZero: true, ticks: { stepSize: 1 } }
+                        }
+                    }
+                };
+            },
+        };
+
+        const configFn = chartConfigs[this.chartFormat];
+        if (!configFn) return;
+
+        const config = configFn();
+        config.options = {
+            ...config.options,
+            maintainAspectRatio: false,
+            responsive: true,
+        };
+
+        this.chartInstance = new Chart(ctx, config);
+    }
+
+    renderCalendarHeatmap() {
+        const container = document.getElementById('calendar-heatmap');
+        if (!container) return;
+
+        // Build heatmap for last 12 weeks
+        const today = new Date();
+        const endDate = new Date(today);
+        const startDate = new Date(today);
+        startDate.setDate(startDate.getDate() - 84); // 12 weeks
+
+        // Build activity map by date string
+        const activityMap = {};
+        this.exercises.forEach(e => {
+            if (e.type !== '休息') {
+                const key = e.date;
+                activityMap[key] = (activityMap[key] || 0) + (e.duration || 0);
+            }
+        });
+
+        // Determine intensity levels
+        const values = Object.values(activityMap);
+        const maxVal = values.length > 0 ? Math.max(...values) : 60;
+        const getLevel = (val) => {
+            if (!val) return 0;
+            const ratio = val / maxVal;
+            if (ratio <= 0.25) return 1;
+            if (ratio <= 0.5) return 2;
+            if (ratio <= 0.75) return 3;
+            return 4;
+        };
+
+        // Build calendar grid: week columns
+        const weekdays = ['一', '二', '三', '四', '五', '六', '日'];
+        const weeks = [];
+
+        // Round to Monday
+        const currentDay = new Date(startDate);
+        const dayOfWeek = currentDay.getDay();
+        const mondayOffset = dayOfWeek === 0 ? -6 : 1 - dayOfWeek;
+        currentDay.setDate(currentDay.getDate() + mondayOffset);
+
+        while (currentDay <= endDate) {
+            const weekCells = [];
+            for (let d = 0; d < 7; d++) {
+                const cellDate = new Date(currentDay);
+                cellDate.setDate(currentDay.getDate() + d);
+                const dateKey = cellDate.toISOString().split('T')[0];
+                const val = activityMap[dateKey] || 0;
+                weekCells.push({
+                    date: dateKey,
+                    dateObj: new Date(cellDate),
+                    value: val,
+                    level: getLevel(val),
+                    inRange: cellDate >= startDate && cellDate <= endDate
+                });
+            }
+            weeks.push(weekCells);
+            currentDay.setDate(currentDay.getDate() + 7);
+        }
+
+        // Render
+        let html = '<div class="cal-weekdays">' + weekdays.map(d => `<span>${d}</span>`).join('') + '</div>';
+        html += '<div class="cal-body">';
+
+        // Month labels mapping
+        const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+        let lastMonth = -1;
+
+        weeks.forEach((week) => {
+            const firstDate = week[0].dateObj;
+            const currentMonth = firstDate.getMonth();
+            const monthLabel = lastMonth !== currentMonth ? monthNames[currentMonth] : '&nbsp;';
+            lastMonth = currentMonth;
+
+            html += `<div class="cal-month-col">
+                <div class="cal-month-label">${monthLabel}</div>`;
+            week.forEach(cell => {
+                const title = cell.inRange && cell.value > 0
+                    ? `${cell.date}: ${cell.value}分钟`
+                    : cell.date;
+                html += `<div class="cal-cell l${cell.level}" title="${title}" data-date="${cell.date}"></div>`;
+            });
+            html += '</div>';
+        });
+
+        html += '</div>';
+
+        // Legend
+        html += '<div class="flex items-center justify-end gap-2 mt-4 text-xs text-gray-500">';
+        html += '<span>少</span>';
+        html += '<div class="cal-cell l0" style="display:inline-block;width:16px;height:16px;"></div>';
+        html += '<div class="cal-cell l1" style="display:inline-block;width:16px;height:16px;"></div>';
+        html += '<div class="cal-cell l2" style="display:inline-block;width:16px;height:16px;"></div>';
+        html += '<div class="cal-cell l3" style="display:inline-block;width:16px;height:16px;"></div>';
+        html += '<div class="cal-cell l4" style="display:inline-block;width:16px;height:16px;"></div>';
+        html += '<span>多</span>';
+        html += '</div>';
+
+        container.innerHTML = html;
+    }
+
+    // ===== Helpers =====
+    escapeHtml(str) {
+        if (!str) return '';
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    escapeAttr(str) {
+        if (!str) return '';
+        return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+}
+
 class MobileMenu {
     constructor() {
         this.init();
@@ -840,6 +1534,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillsRenderer = new SkillsRenderer();
     const readingRenderer = new ReadingRenderer();
     const learningRenderer = new LearningRenderer();
+    const lifeRenderer = new LifeRenderer();
     const mobileMenu = new MobileMenu();
 
     // Render latest posts on home page
