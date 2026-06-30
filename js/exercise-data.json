@@ -1,11 +1,37 @@
 {
-    "exercises": [
-        { "date": "2026-06-29", "type": "跑步", "duration": 20, "distance": 5.2, "calories": 320, "note": "配速4.5km/h" },
-        { "date": "2026-06-28", "type": "室外散步", "duration": 15, "distance": 1.5, "calories": 100, "note": "" }
-],
-    "goals": {
-        "weeklyRun": { "label": "每周跑步", "target": 3, "unit": "次" },
-        "weeklyExercise": { "label": "每周运动", "target": 3, "unit": "天" },
-        "monthlyDistance": { "label": "月跑量", "target": 20, "unit": "公里" }
+  "exercises": [
+    {
+      "date": "2026-06-29",
+      "type": "跑步",
+      "duration": 20,
+      "distance": 5.2,
+      "calories": 320,
+      "note": "配速4.5km/h"
+    },
+    {
+      "date": "2026-06-28",
+      "type": "室外散步",
+      "duration": 15,
+      "distance": 1.5,
+      "calories": 100,
+      "note": ""
     }
+  ],
+  "goals": {
+    "weeklyRun": {
+      "label": "每周跑步",
+      "target": 3,
+      "unit": "次"
+    },
+    "weeklyExercise": {
+      "label": "每周运动",
+      "target": 3,
+      "unit": "天"
+    },
+    "monthlyDistance": {
+      "label": "月跑量",
+      "target": 20,
+      "unit": "公里"
+    }
+  }
 }
