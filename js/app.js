@@ -1578,6 +1578,9 @@ class LifeRenderer {
         const allTags = [...new Set(this.moments.flatMap(m => m.tags || []))];
         if (allTags.length === 0) return;
 
+        // 先清空已有标签，避免重复渲染
+        container.innerHTML = '';
+
         allTags.forEach(tag => {
             const btn = document.createElement('button');
             btn.className = 'tag-btn px-4 py-2 rounded-full text-sm font-medium transition-all';
