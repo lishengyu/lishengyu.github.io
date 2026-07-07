@@ -5,7 +5,7 @@
         "category": "后端开发",
         "priority": "high",
         "progress": 40,
-        "deadline": "2024-12-31",
+        "deadline": "2026-12-31",
         "file": "go-microservices.md",
         "tags": ["Go", "gRPC", "微服务"]
     },
@@ -15,7 +15,7 @@
         "category": "架构",
         "priority": "medium",
         "progress": 20,
-        "deadline": "2025-03-31",
+        "deadline": "2026-12-31",
         "file": "system-design.md",
         "tags": ["分布式", "高并发", "数据库"]
     },
@@ -25,7 +25,7 @@
         "category": "编程语言",
         "priority": "medium",
         "progress": 60,
-        "deadline": "2024-10-31",
+        "deadline": "2026-12-31",
         "file": "c-deep-dive.md",
         "tags": ["C", "Unix", "系统编程"]
     }
