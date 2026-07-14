@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-07-13T03:21:31.118Z",
+  "syncedAt": "2026-07-14T02:45:35.007Z",
   "summary": {
     "totalBooks": 379,
     "publicCount": 375,
@@ -12,28 +12,6 @@
   "finished": [],
   "unread": [
     {
-      "bookId": "908161",
-      "title": "以幽默的方式过一生",
-      "author": "琢磨先生",
-      "cover": "https://cdn.weread.qq.com/weread/cover/67/YueWen_908161/t6_YueWen_908161.jpg",
-      "secret": false,
-      "category": "电子书",
-      "progress": 0,
-      "chapterTitle": "",
-      "lastRead": 1783912905
-    },
-    {
-      "bookId": "3300163616",
-      "title": "法律篇",
-      "author": "[古希腊]柏拉图",
-      "cover": "https://cdn.weread.qq.com/weread/cover/48/cpplatform_fqklkkrg5bvakvtuhsjkgw/t6_cpplatform_fqklkkrg5bvakvtuhsjkgw1757399176.jpg",
-      "secret": false,
-      "category": "电子书",
-      "progress": 0,
-      "chapterTitle": "",
-      "lastRead": 1783912905
-    },
-    {
       "bookId": "3300060305",
       "title": "非暴力沟通（修订版）",
       "author": "马歇尔·卢森堡",
@@ -42,29 +20,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912905
-    },
-    {
-      "bookId": "44026191",
-      "title": "纳瓦尔宝典",
-      "author": "埃里克·乔根森",
-      "cover": "https://cdn.weread.qq.com/weread/cover/89/YueWen_44026191/t6_YueWen_44026191.jpg",
-      "secret": false,
-      "category": "电子书",
-      "progress": 0,
-      "chapterTitle": "",
-      "lastRead": 1783912904
-    },
-    {
-      "bookId": "26713355",
-      "title": "你当像鸟飞往你的山",
-      "author": "[美]塔拉·韦斯特弗",
-      "cover": "https://cdn.weread.qq.com/weread/cover/22/YueWen_26713355/t6_YueWen_26713355.jpg",
-      "secret": false,
-      "category": "电子书",
-      "progress": 0,
-      "chapterTitle": "",
-      "lastRead": 1783912904
+      "lastRead": 1783997148
     },
     {
       "bookId": "910415",
@@ -75,7 +31,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912904
+      "lastRead": 1783997147
     },
     {
       "bookId": "25375869",
@@ -86,18 +42,29 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912904
+      "lastRead": 1783997147
     },
     {
-      "bookId": "809774",
-      "title": "阿甘正传（同名电影原著）",
-      "author": "温斯顿·葛鲁姆",
-      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/774/809774/t6_809774.jpg",
+      "bookId": "908161",
+      "title": "以幽默的方式过一生",
+      "author": "琢磨先生",
+      "cover": "https://cdn.weread.qq.com/weread/cover/67/YueWen_908161/t6_YueWen_908161.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912903
+      "lastRead": 1783997147
+    },
+    {
+      "bookId": "3300163616",
+      "title": "法律篇",
+      "author": "[古希腊]柏拉图",
+      "cover": "https://cdn.weread.qq.com/weread/cover/48/cpplatform_fqklkkrg5bvakvtuhsjkgw/t6_cpplatform_fqklkkrg5bvakvtuhsjkgw1757399176.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": "",
+      "lastRead": 1783997147
     },
     {
       "bookId": "809763",
@@ -108,7 +75,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912903
+      "lastRead": 1783997146
     },
     {
       "bookId": "216211",
@@ -119,18 +86,29 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912903
+      "lastRead": 1783997146
     },
     {
-      "bookId": "853116",
-      "title": "杀死一只知更鸟（同名电影原著）",
-      "author": "哈珀·李",
-      "cover": "https://cdn.weread.qq.com/weread/cover/32/YueWen_853116/t6_YueWen_853116.jpg",
+      "bookId": "44026191",
+      "title": "纳瓦尔宝典",
+      "author": "埃里克·乔根森",
+      "cover": "https://cdn.weread.qq.com/weread/cover/89/YueWen_44026191/t6_YueWen_44026191.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912902
+      "lastRead": 1783997146
+    },
+    {
+      "bookId": "26713355",
+      "title": "你当像鸟飞往你的山",
+      "author": "[美]塔拉·韦斯特弗",
+      "cover": "https://cdn.weread.qq.com/weread/cover/22/YueWen_26713355/t6_YueWen_26713355.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": "",
+      "lastRead": 1783997146
     },
     {
       "bookId": "26441414",
@@ -141,7 +119,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912902
+      "lastRead": 1783997145
     },
     {
       "bookId": "856177",
@@ -152,7 +130,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912902
+      "lastRead": 1783997145
     },
     {
       "bookId": "856137",
@@ -163,7 +141,18 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912902
+      "lastRead": 1783997145
+    },
+    {
+      "bookId": "809774",
+      "title": "阿甘正传（同名电影原著）",
+      "author": "温斯顿·葛鲁姆",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/774/809774/t6_809774.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": "",
+      "lastRead": 1783997145
     },
     {
       "bookId": "3300144134",
@@ -174,7 +163,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912901
+      "lastRead": 1783997144
     },
     {
       "bookId": "909882",
@@ -185,7 +174,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912901
+      "lastRead": 1783997144
     },
     {
       "bookId": "40726710",
@@ -196,7 +185,18 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912901
+      "lastRead": 1783997144
+    },
+    {
+      "bookId": "853116",
+      "title": "杀死一只知更鸟（同名电影原著）",
+      "author": "哈珀·李",
+      "cover": "https://cdn.weread.qq.com/weread/cover/32/YueWen_853116/t6_YueWen_853116.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": "",
+      "lastRead": 1783997144
     },
     {
       "bookId": "3300025463",
@@ -207,7 +207,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912900
+      "lastRead": 1783997143
     },
     {
       "bookId": "3300127322",
@@ -218,7 +218,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912900
+      "lastRead": 1783997143
     },
     {
       "bookId": "40527664",
@@ -229,7 +229,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912900
+      "lastRead": 1783997143
     },
     {
       "bookId": "3300143260",
@@ -240,73 +240,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912900
-    },
-    {
-      "bookId": "839185",
-      "title": "月亮与六便士",
-      "author": "毛姆",
-      "cover": "https://cdn.weread.qq.com/weread/cover/0/YueWen_839185/t6_YueWen_839185.jpg",
-      "secret": false,
-      "category": "电子书",
-      "progress": 0,
-      "chapterTitle": "",
-      "lastRead": 1783912899
-    },
-    {
-      "bookId": "3300146674",
-      "title": "悉达多（知书经典）",
-      "author": "[德]赫尔曼·黑塞",
-      "cover": "https://cdn.weread.qq.com/weread/cover/16/cpplatform_18h5dgzgzjdgpmxtswtqnr/t6_cpplatform_18h5dgzgzjdgpmxtswtqnr1748513001.jpg",
-      "secret": false,
-      "category": "电子书",
-      "progress": 0,
-      "chapterTitle": "",
-      "lastRead": 1783912899
-    },
-    {
-      "bookId": "33617657",
-      "title": "平面国（果麦经典）",
-      "author": "埃德温·艾勃特",
-      "cover": "https://cdn.weread.qq.com/weread/cover/76/YueWen_33617657/t6_YueWen_33617657.jpg",
-      "secret": false,
-      "category": "电子书",
-      "progress": 0,
-      "chapterTitle": "",
-      "lastRead": 1783912899
-    },
-    {
-      "bookId": "3300077264",
-      "title": "巴巴拉少校（外研社双语读库）",
-      "author": "[英]萧伯纳",
-      "cover": "https://cdn.weread.qq.com/weread/cover/89/cpplatform_mbjf7v2utvcgfsrftbjmdo/t6_cpplatform_mbjf7v2utvcgfsrftbjmdo1699523848.jpg",
-      "secret": false,
-      "category": "电子书",
-      "progress": 0,
-      "chapterTitle": "",
-      "lastRead": 1783912898
-    },
-    {
-      "bookId": "855327",
-      "title": "悉达多（果麦经典）",
-      "author": "[德]赫尔曼·黑塞",
-      "cover": "https://cdn.weread.qq.com/weread/cover/68/YueWen_855327/t6_YueWen_855327.jpg",
-      "secret": false,
-      "category": "电子书",
-      "progress": 0,
-      "chapterTitle": "",
-      "lastRead": 1783912898
-    },
-    {
-      "bookId": "935536",
-      "title": "百年孤独",
-      "author": "[哥]加西亚•马尔克斯",
-      "cover": "https://cdn.weread.qq.com/weread/cover/49/yuewen_935536/t6_yuewen_9355361682243599.jpg",
-      "secret": false,
-      "category": "电子书",
-      "progress": 0,
-      "chapterTitle": "",
-      "lastRead": 1783912898
+      "lastRead": 1783997143
     },
     {
       "bookId": "825681",
@@ -317,73 +251,73 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912898
+      "lastRead": 1783997142
     },
     {
-      "bookId": "755747",
-      "title": "火星救援",
-      "author": "安迪·威尔",
-      "cover": "https://cdn.weread.qq.com/weread/cover/87/YueWen_755747/t6_YueWen_755747.jpg",
+      "bookId": "839185",
+      "title": "月亮与六便士",
+      "author": "毛姆",
+      "cover": "https://cdn.weread.qq.com/weread/cover/0/YueWen_839185/t6_YueWen_839185.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912897
+      "lastRead": 1783997142
     },
     {
-      "bookId": "823426",
-      "title": "影响力（湛庐经典）",
-      "author": "[美]罗伯特·西奥迪尼",
-      "cover": "https://cdn.weread.qq.com/weread/cover/31/YueWen_823426/t6_YueWen_823426.jpg",
+      "bookId": "3300146674",
+      "title": "悉达多（知书经典）",
+      "author": "[德]赫尔曼·黑塞",
+      "cover": "https://cdn.weread.qq.com/weread/cover/16/cpplatform_18h5dgzgzjdgpmxtswtqnr/t6_cpplatform_18h5dgzgzjdgpmxtswtqnr1748513001.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912897
+      "lastRead": 1783997142
     },
     {
-      "bookId": "907272",
-      "title": "广岛之恋（法国同名电影原著）",
-      "author": "[法]玛格丽特·杜拉斯",
-      "cover": "https://cdn.weread.qq.com/weread/cover/69/YueWen_907272/t6_YueWen_907272.jpg",
+      "bookId": "33617657",
+      "title": "平面国（果麦经典）",
+      "author": "埃德温·艾勃特",
+      "cover": "https://cdn.weread.qq.com/weread/cover/76/YueWen_33617657/t6_YueWen_33617657.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912897
+      "lastRead": 1783997142
     },
     {
-      "bookId": "3300018688",
-      "title": "生命之书：365天的静心冥想",
-      "author": "[印度]克里希那穆提",
-      "cover": "https://cdn.weread.qq.com/weread/cover/88/3300018688/t6_3300018688.jpg",
+      "bookId": "3300077264",
+      "title": "巴巴拉少校（外研社双语读库）",
+      "author": "[英]萧伯纳",
+      "cover": "https://cdn.weread.qq.com/weread/cover/89/cpplatform_mbjf7v2utvcgfsrftbjmdo/t6_cpplatform_mbjf7v2utvcgfsrftbjmdo1699523848.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912896
+      "lastRead": 1783997141
     },
     {
-      "bookId": "831995",
-      "title": "瓦尔登湖：世界上最修心的地方",
-      "author": "梭罗",
-      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/995/831995/t6_831995.jpg",
+      "bookId": "855327",
+      "title": "悉达多（果麦经典）",
+      "author": "[德]赫尔曼·黑塞",
+      "cover": "https://cdn.weread.qq.com/weread/cover/68/YueWen_855327/t6_YueWen_855327.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912896
+      "lastRead": 1783997141
     },
     {
-      "bookId": "857863",
-      "title": "献给阿尔吉侬的花束",
-      "author": "丹尼尔·凯斯",
-      "cover": "https://cdn.weread.qq.com/weread/cover/11/yuewen_857863/t6_yuewen_8578631681827306.jpg",
+      "bookId": "935536",
+      "title": "百年孤独",
+      "author": "[哥]加西亚•马尔克斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/49/yuewen_935536/t6_yuewen_9355361682243599.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912896
+      "lastRead": 1783997141
     },
     {
       "bookId": "849752",
@@ -394,29 +328,40 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912896
+      "lastRead": 1783997140
     },
     {
-      "bookId": "22717330",
-      "title": "世界在你心中",
-      "author": "[印度]克里希那穆提",
-      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/330/22717330/t6_22717330.jpg",
+      "bookId": "755747",
+      "title": "火星救援",
+      "author": "安迪·威尔",
+      "cover": "https://cdn.weread.qq.com/weread/cover/87/YueWen_755747/t6_YueWen_755747.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912895
+      "lastRead": 1783997140
     },
     {
-      "bookId": "3300019682",
-      "title": "你将成为自己的光",
-      "author": "[印度]克里希那穆提",
-      "cover": "https://cdn.weread.qq.com/weread/cover/82/3300019682/t6_3300019682.jpg",
+      "bookId": "823426",
+      "title": "影响力（湛庐经典）",
+      "author": "[美]罗伯特·西奥迪尼",
+      "cover": "https://cdn.weread.qq.com/weread/cover/31/YueWen_823426/t6_YueWen_823426.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912895
+      "lastRead": 1783997140
+    },
+    {
+      "bookId": "907272",
+      "title": "广岛之恋（法国同名电影原著）",
+      "author": "[法]玛格丽特·杜拉斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/69/YueWen_907272/t6_YueWen_907272.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": "",
+      "lastRead": 1783997140
     },
     {
       "bookId": "3300019685",
@@ -427,29 +372,40 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912895
+      "lastRead": 1783997139
     },
     {
-      "bookId": "22717306",
-      "title": "当教育成为束缚",
+      "bookId": "3300018688",
+      "title": "生命之书：365天的静心冥想",
       "author": "[印度]克里希那穆提",
-      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/306/22717306/t6_22717306.jpg",
+      "cover": "https://cdn.weread.qq.com/weread/cover/88/3300018688/t6_3300018688.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912894
+      "lastRead": 1783997139
     },
     {
-      "bookId": "3300135832",
-      "title": "鸢尾花（“浪漫主义的自由骑士”黑塞，兼具诗意与哲思的故事）",
-      "author": "[德]赫尔曼·黑塞",
-      "cover": "https://cdn.weread.qq.com/weread/cover/21/cpplatform_jygudkr6c7r34kn1dnrrlq/t6_cpplatform_jygudkr6c7r34kn1dnrrlq1740995454.jpg",
+      "bookId": "831995",
+      "title": "瓦尔登湖：世界上最修心的地方",
+      "author": "梭罗",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/995/831995/t6_831995.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912894
+      "lastRead": 1783997139
+    },
+    {
+      "bookId": "857863",
+      "title": "献给阿尔吉侬的花束",
+      "author": "丹尼尔·凯斯",
+      "cover": "https://cdn.weread.qq.com/weread/cover/11/yuewen_857863/t6_yuewen_8578631681827306.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": "",
+      "lastRead": 1783997139
     },
     {
       "bookId": "22717308",
@@ -460,7 +416,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912894
+      "lastRead": 1783997138
     },
     {
       "bookId": "3300186329",
@@ -471,18 +427,29 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912894
+      "lastRead": 1783997138
     },
     {
-      "bookId": "3300019691",
-      "title": "重塑心灵",
+      "bookId": "22717330",
+      "title": "世界在你心中",
       "author": "[印度]克里希那穆提",
-      "cover": "https://cdn.weread.qq.com/weread/cover/91/3300019691/t6_3300019691.jpg",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/330/22717330/t6_22717330.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912893
+      "lastRead": 1783997138
+    },
+    {
+      "bookId": "3300019682",
+      "title": "你将成为自己的光",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://cdn.weread.qq.com/weread/cover/82/3300019682/t6_3300019682.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": "",
+      "lastRead": 1783997138
     },
     {
       "bookId": "3300174471",
@@ -493,7 +460,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912893
+      "lastRead": 1783997137
     },
     {
       "bookId": "3300019688",
@@ -504,18 +471,29 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912893
+      "lastRead": 1783997137
     },
     {
-      "bookId": "40527666",
-      "title": "小王子",
-      "author": "圣埃克絮佩里",
-      "cover": "https://cdn.weread.qq.com/weread/cover/32/YueWen_40527666/t6_YueWen_40527666.jpg",
+      "bookId": "22717306",
+      "title": "当教育成为束缚",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/306/22717306/t6_22717306.jpg",
       "secret": false,
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912892
+      "lastRead": 1783997137
+    },
+    {
+      "bookId": "3300135832",
+      "title": "鸢尾花（“浪漫主义的自由骑士”黑塞，兼具诗意与哲思的故事）",
+      "author": "[德]赫尔曼·黑塞",
+      "cover": "https://cdn.weread.qq.com/weread/cover/21/cpplatform_jygudkr6c7r34kn1dnrrlq/t6_cpplatform_jygudkr6c7r34kn1dnrrlq1740995454.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": "",
+      "lastRead": 1783997137
     },
     {
       "bookId": "35036079",
@@ -526,7 +504,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912892
+      "lastRead": 1783997136
     },
     {
       "bookId": "3300054149",
@@ -537,7 +515,7 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912892
+      "lastRead": 1783997136
     },
     {
       "bookId": "35551088",
@@ -548,7 +526,18 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912892
+      "lastRead": 1783997136
+    },
+    {
+      "bookId": "3300019691",
+      "title": "重塑心灵",
+      "author": "[印度]克里希那穆提",
+      "cover": "https://cdn.weread.qq.com/weread/cover/91/3300019691/t6_3300019691.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": "",
+      "lastRead": 1783997136
     },
     {
       "bookId": "814917",
@@ -559,7 +548,18 @@
       "category": "电子书",
       "progress": 0,
       "chapterTitle": "",
-      "lastRead": 1783912891
+      "lastRead": 1783997135
+    },
+    {
+      "bookId": "40527666",
+      "title": "小王子",
+      "author": "圣埃克絮佩里",
+      "cover": "https://cdn.weread.qq.com/weread/cover/32/YueWen_40527666/t6_YueWen_40527666.jpg",
+      "secret": false,
+      "category": "电子书",
+      "progress": 0,
+      "chapterTitle": "",
+      "lastRead": 1783997135
     },
     {
       "bookId": "27328527",
