@@ -1,6 +1,22 @@
 {
   "exercises": [
     {
+      "date": "2026-07-13",
+      "type": "力量训练",
+      "duration": 20,
+      "distance": 0,
+      "calories": 0,
+      "note": ""
+    },
+    {
+      "date": "2026-07-13",
+      "type": "跑步",
+      "duration": 40,
+      "distance": 3,
+      "calories": 0,
+      "note": ""
+    },
+    {
       "date": "2026-06-29",
       "type": "跑步",
       "duration": 20,
